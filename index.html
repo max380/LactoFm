@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no" />
+	<link href="style.css" rel="stylesheet">
+	<icon src="icon.png" />
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	
+		<script>
+
+	</script>
+	
+</head>
+
+<script language="javascript" type="text/javascript">
+function show_hide(id)
+{
+var id = document.getElementById(id) ;
+var c1 = document.getElementById("cont1") ;
+var c2 = document.getElementById("cont2") ;
+var c3 = document.getElementById("cont3") ;
+c1.style.display = "none" ;
+c2.style.display = "none" ;
+c3.style.display = "none" ;
+    if (id.style.display == "none")
+    {
+        id.style.display = "block";
+    }
+    else
+    {
+        id.style.display = "none";
+    }
+}  
+</script>
+
+<body>
+
+		<div class="wrapper">
+
+	<header class="header">
+ <center> <img src="images/logo.png" alt="logo by mobifreaks"/> </center> 
+	</header><!-- .header-->
+<main class="content">	
+
+	
+
+
+    <div id="cont1">
+        
+	
+<center>
+	<p class="buttond"  style="text-align:center;"><a href="http://vk.com/lactofm" target="_self" style="cursor: pointer; font-size:12px;  text-decoration: none; padding:10px 20px; color:#1782cf; background-color:#FFE680; border-radius:4px; border: 3px solid #FFE680;">Наша группа в VK</a></p>
+	
+	<audio id="player" src="http://178.33.138.231:8001/stream"></audio>
+<div>
+    <img onclick="document.getElementById('player').play()" src="images/play.png" onmouseover="this.src='images/playon.png';" width="250" height="250"/> </button>
+</div> 
+Текущая песня: <span id="cc_strinfo_song_lactose" class="cc_streaminfo">Проверьте подключениие к сети...</span><br />
+<a href="index.html"><img src="images/stop.png" alt="logo by mobifreaks"/></a>
+	</center><!-- .content --> 
+
+		
+    </div>
+    <div id="cont2">
+	
+<center>
+
+
+</center> 
+
+</center>
+		
+    </div>
+    <div id="cont3" style='overflow-x:hidden;'>
+<center>
+<br>
+<br>
+<br>
+В разработке! Мы работаем над добавлением чата!<br>
+Ожидайте обновление в ближайшее выходные! 
+</center>
+<!--<script type="text/javascript" src="scriptoto.js"></script>
+<h4><img class="preview" width="20" height="20" src="http://tvk-hi.my1.ru/sml/MaddysonFace.gif" />Последние новости</h4> -->
+<ul></ul>
+
+
+	   
+     </div>
+	 </main>
+
+<footer class="footer">
+<div id="menu" style="display: table; margin: 0 auto; text-align: center;">
+    <div id="punkt1">
+        <a href="#" onclick="show_hide('cont1')" >Плеер</a>
+    </div><!--punkt1-->
+  <div id="punkt2">
+        <a href="#" onclick="show_hide('cont2')" >Эфиры</a>
+    </div><!--punkt2-->
+  <div id="punkt3">
+        <a href="#" onclick="show_hide('cont3')" >Чат</a>
+    </div><!--punkt3-->
+</div><!--menu-->
+
+	
+	
+</footer>
+<script type="text/javascript" src="https://debug1.phonegap.com/target/target-script-min.js#8ed2dd08-6e19-11e4-a58d-ca2dfefed588"></script></body>
+<script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/streaminfo.js"></script>
+</html>
