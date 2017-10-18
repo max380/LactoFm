@@ -155,7 +155,7 @@
 
     <!-- Define app splash screen for each platform. -->
 
-   <splash src="splash.jpg" gap:platform="android" />
+   <splash src="splash.png" gap:platform="android" />
 
 
 
