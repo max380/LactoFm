@@ -89,7 +89,7 @@
 
     <!-- Plugins -->
 
-	<plugin name="cordova-plugin-splashscreen" source="npm" spec="&gt;1.0.0" />
+	<plugin name="cordova-plugin-splashscreen"        source="npm" spec="~3.2.1" />
 	<plugin name="phonegap-plugin-pgb-oauth" spec="https://github.com/wildabeast/phonegap-plugin-pgb-oauth.git" />
     <plugin name="phonegap-plugin-apploader" spec="https://github.com/wildabeast/phonegap-plugin-apploader.git" />
 	

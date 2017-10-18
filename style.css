@@ -15,7 +15,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+
 	font: inherit;
 	vertical-align: baseline;
 	text-decoration: none
@@ -220,3 +220,13 @@ div.read-more
 			text-overflow: ellipsis;
 			height: 20px;
 		}
+		
+.panel {
+	padding: 60px;
+
+	width: 200px;
+	background: #eeeeee;
+	border: #282828 2px solid;
+	font-family: Georgia;
+}		
+		
