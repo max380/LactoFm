@@ -10,7 +10,7 @@
 
         id        = "com.lactofm"
 
-        version   = "0.2">
+        version   = "0.3">
 
 
 
@@ -76,6 +76,7 @@
 
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 	
+	
     <!--
 
         Define a specific version of PhoneGap to build into your app.
@@ -88,8 +89,10 @@
 
     <!-- Plugins -->
 
-
-
+	<plugin name="cordova-plugin-splashscreen" source="npm" spec="&gt;1.0.0" />
+	<plugin name="phonegap-plugin-pgb-oauth" spec="https://github.com/wildabeast/phonegap-plugin-pgb-oauth.git" />
+    <plugin name="phonegap-plugin-apploader" spec="https://github.com/wildabeast/phonegap-plugin-apploader.git" />
+	
     <!-- Core plugins -->
 
 <!--     <plugin name="cordova-plugin-battery-status" />
