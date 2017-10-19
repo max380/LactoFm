@@ -86,7 +86,7 @@
 
 
 
-    <!-- Plugins -->
+    <!-- Plugins 
 	
 	<plugin name="cordova-plugin-splashscreen"      source="npm">
       <preference name="SplashScreen"               value="splash" />
@@ -95,7 +95,7 @@
       <preference name="ShowSplashScreenSpinner"    value="false" />
 	  <preference name="SplashShowOnlyFirstTime" 	value="true" />
 	</plugin>  
-	
+	-->
     <!-- Core plugins -->
 
 <!--     <plugin name="cordova-plugin-battery-status" />
