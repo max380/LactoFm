@@ -90,8 +90,8 @@
 	
 	<plugin name="cordova-plugin-splashscreen"      source="npm">
       <preference name="SplashScreen"               value="splash" />
-      <preference name="SplashScreenDelay"          value="false" />
-      <preference name="FadeSplashScreen"           value="false"/>
+      <preference name="SplashScreenDelay"          value="3000" />
+      <preference name="FadeSplashScreen"           value="1000"/>
       <preference name="ShowSplashScreenSpinner"    value="false" />
 	  <preference name="SplashShowOnlyFirstTime" 	value="true" />
 	</plugin>  
