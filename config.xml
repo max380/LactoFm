@@ -87,18 +87,15 @@
 
 
     <!-- Plugins -->
-
-	<plugin name="phonegap-plugin-pgb-oauth" spec="https://github.com/wildabeast/phonegap-plugin-pgb-oauth.git" />
-    <plugin name="phonegap-plugin-apploader" spec="https://github.com/wildabeast/phonegap-plugin-apploader.git" />
 	
-	<plugin name="cordova-plugin-splashscreen"                source="npm">
+	<plugin name="cordova-plugin-splashscreen"      source="npm">
       <preference name="SplashScreen"               value="splash" />
       <preference name="AutoHideSplashScreen"       value="true" />
       <preference name="SplashScreenDelay"          value="5000" />
       <preference name="SplashMaintainAspectRatio"  value="true" />
       <preference name="FadeSplashScreen"           value="false"/>
       <preference name="ShowSplashScreenSpinner"    value="false" />
-</plugin>  
+	</plugin>  
 	
     <!-- Core plugins -->
 
