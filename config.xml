@@ -95,6 +95,7 @@
       <preference name="SplashMaintainAspectRatio"  value="false" />
       <preference name="FadeSplashScreen"           value="false"/>
       <preference name="ShowSplashScreenSpinner"    value="false" />
+	  <preference name="SplashShowOnlyFirstTime" 	value="true" />
 	</plugin>  
 	
     <!-- Core plugins -->
