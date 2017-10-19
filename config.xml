@@ -160,13 +160,7 @@
 
 
 <splash src="splash.png" platform="android" qualifier="ldpi" />
-<splash src="splash.png" platform="android" qualifier="mdpi" />
-<splash src="splash.png" platform="android" qualifier="hdpi" />
-<splash src="splash.png" platform="android" qualifier="xhdpi" />
-<splash src="splash.png" platform="android" qualifier="fr-xhdpi" />
-<splash src="splash.png" platform="android" qualifier="port-xxhdpi" />
-<splash src="splash.png" platform="android" qualifier="land-xxhdpi" />
-<splash src="splash.png" platform="android" qualifier="xxxhdpi" />
+
 
 
 
@@ -210,7 +204,7 @@
 
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
 
-    <plugin name="cordova-plugin-whitelist" version="1" />
+    <plugin name="cordova-plugin-whitelist" version="1.3.2" />
 
     <allow-intent href="http://*/*" />
 
