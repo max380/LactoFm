@@ -76,7 +76,6 @@
 
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 	
-	<preference name="SplashScreen" 			  value="screen"/>
     <!--
 
         Define a specific version of PhoneGap to build into your app.
@@ -89,9 +88,17 @@
 
     <!-- Plugins -->
 
-	<plugin name="cordova-plugin-splashscreen"        source="npm" spec="~3.2.1" />
 	<plugin name="phonegap-plugin-pgb-oauth" spec="https://github.com/wildabeast/phonegap-plugin-pgb-oauth.git" />
     <plugin name="phonegap-plugin-apploader" spec="https://github.com/wildabeast/phonegap-plugin-apploader.git" />
+	
+	<plugin name="cordova-plugin-splashscreen"                source="npm">
+      <preference name="SplashScreen"               value="splash" />
+      <preference name="AutoHideSplashScreen"       value="true" />
+      <preference name="SplashScreenDelay"          value="5000" />
+      <preference name="SplashMaintainAspectRatio"  value="true" />
+      <preference name="FadeSplashScreen"           value="false"/>
+      <preference name="ShowSplashScreenSpinner"    value="false" />
+</plugin>  
 	
     <!-- Core plugins -->
 
