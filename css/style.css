@@ -1,0 +1,40 @@
+body, p {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    width: 100vw;
+    height: 75vh;
+}
+
+nav.menu {
+    width: 100vw;
+    height: 18vh;
+    padding-top: 7vh;
+    background: url(../img/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    text-align: center;
+}
+
+button.m-btn {
+    background: none;
+    border: none;
+    color: #dedede;
+    font-size: 2.2em;
+    padding: 5vh;
+    text-shadow: 0px 0px 40px black;
+    transition: all 0.3s;
+}
+
+button.m-btn.active {color: #ea29f5;text-shadow: 0px 0px 20px #0014ff;transition: all 0.3s;}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}

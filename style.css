@@ -28,7 +28,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background: #2bbcff;
+	background: url(images/top-bg.png) ;
+	background-color: #801818;
 }
 ol, ul {
 	list-style: none;
@@ -80,7 +81,7 @@ body {
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
-	background: #2bbcff;
+
 }
 
 
@@ -128,7 +129,7 @@ div#menu>div img {margin-top: 23%;height: 50%;width: 50%;}
     margin:0;
     padding:0px;
     height: 32px;
-    color: #FFFFFF;
+    color: #801818;
     width: 100%;
     background: white;
     position: absolute;
