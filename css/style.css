@@ -127,6 +127,7 @@ span#cc_strinfo_listeners_lactose {
     width: 100%;
     left: 0;
     bottom: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 div#line {
@@ -166,8 +167,9 @@ a.ccbuy {
 }
 
 div#cc_recenttracks_lactose {
-    height: 100%;
+    height: 120%;
     overflow: auto;
+    padding-bottom: 20%;
 }
 
 .ccartist {
@@ -178,7 +180,7 @@ div#cc_recenttracks_lactose {
 
 a#order {
     padding: 15px;
-    background: linear-gradient(to left, #ff0009, #ff0072);
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(255, 0, 114, 0.59), rgba(255, 0, 7, 0.58)) repeat scroll 0% 0%;
     font-size: 20px;
     color: white;
     margin-top: 10px;
@@ -191,4 +193,21 @@ a#order {
     text-align: center;
     font-family: monospace;
     text-decoration: none;
+}
+
+iframe.frmae {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.soc img {
+    width: 80%;
+}
+
+.soc a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
