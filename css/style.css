@@ -1,11 +1,24 @@
 body, p {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: #2d2d2d;
+    color: white;
 }
 
 .body {
     width: 100vw;
-    height: 75vh;
+    height: 87vh;
+    margin-bottom: -12vh;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
 }
 
 nav.menu {
@@ -17,6 +30,8 @@ nav.menu {
     background-size: cover;
     background-position: center top;
     text-align: center;
+    position: relative;
+    z-index: 1000;
 }
 
 button.m-btn {
@@ -27,14 +42,153 @@ button.m-btn {
     padding: 5vh;
     text-shadow: 0px 0px 40px black;
     transition: all 0.3s;
+    position: relative;
 }
 
-button.m-btn.active {color: #ea29f5;text-shadow: 0px 0px 20px #0014ff;transition: all 0.3s;}
+button.m-btn.active {color: #ea29f5;text-shadow: 0px 0px 20px #0014ff;transition: all 0.3s;border-bottom: 3px solid #f440ff;}
 
 .page {
     display: none;
 }
 
-.page.active {
+.content {
+    height: inherit;
+    width: 310vw;
+}
+
+.content>.page {
+    width: 100vw;
+    height: inherit;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+
+div#home {
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.cd {   
+margin: auto; 
+text-align: center;
+margin-top: 2vh;
+}
+.cd>img{
+    height: 30vh;
+}
+
+.music-name {
+    background: linear-gradient(to right, #ff007296, #ff000794);
+    padding: 15px;
+    font-size: 1.3em;
+    margin-top: 2vh;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+button.play {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 7em;
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.player {
+    text-align: center;
+    margin: auto;
+}
+
+button.play>i {
+    display: none;
+}
+
+button.play>i.active {
     display: block;
+}
+
+a#stop {
+    color: white;
+    font-size: 7em;
+    margin-top: 4vh;
+    text-align: center;
+    text-shadow: 0px 0px 15px #ffffff85;
+}
+
+
+span#cc_strinfo_listeners_lactose {
+    position: absolute;
+    font-size: 0.5em;
+    width: 100%;
+    left: 0;
+    bottom: 3px;
+}
+
+div#line {
+    background: #860a2e;
+}
+
+
+.cctrack {
+    width: 90%;
+    margin: auto;
+    background: #404040;
+    padding: 2px;
+    margin-bottom: 20px !important;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.cccover {
+    overflow: hidden;
+    border-radius: 100px;
+}
+
+.cccover>img {
+    margin-bottom: -4px;
+}
+
+a.ccbuy {
+    display: none;
+}
+
+.cctitle {
+    color: #ff0072 !important;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.3em;
+}
+
+div#cc_recenttracks_lactose {
+    height: 100%;
+    overflow: auto;
+}
+
+.ccartist {
+    color: #ff044b;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+a#order {
+    padding: 15px;
+    background: linear-gradient(to left, #ff0009, #ff0072);
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    border-radius: 2000px;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+    font-family: monospace;
+    text-decoration: none;
 }

@@ -4,42 +4,83 @@
    <title>Lactofm</title>
    <meta charset="utf-8">
    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/play.js"></script>
 	
  </head>
  <body>
-	  <script>
-	  $( document ).ready(function() {
- $('.menu>button').click(function() {
- if(!$(this).hasClass('active')){
-	$('.menu>button').removeClass('active');
-	$('.body>.page').removeClass('active');
-	$(this).addClass('active');
-	$('.body').find('#'+$(this).attr('id')).addClass('active');
- }
- 
- });
- });
- </script>
-
  
  <div class="body">
  
- <div class="page" id="news">1</div>
- <div class="page active" id="home">2</div>
- <div class="page" id="line">3</div>
+	<div class="content">
+		<div  id="news" class="page">
+		
+		</div>
+		
+		
+		
+		<div  id="home" class="page active"> 
+							<div class="cd"><img src="img/cd.png"></img></div>
+				
+							<div class="music-name"> <span id="cc_strinfo_song_lactose" class="cc_streaminfo">Загрузка ...</span> </div>
+				
+								<div class="player"><button onclick="document.getElementById('player').play(); document.getElementById('stop').style.display='block';document.getElementById('play-play').style.display='none';" id="play-play" class="play">
+				
+									<i class="fa fa-grav" aria-hidden="true"></i>
+									<i class="fa fa-snowflake-o" aria-hidden="true"></i>
+									<i class="fa fa-bomb" aria-hidden="true"></i>
+									<i class="fa fa-cog" aria-hidden="true"></i>
+									<i class="fa fa-globe" aria-hidden="true"></i>
+									<i class="fa fa-life-ring" aria-hidden="true"></i>
+									<i class="fa fa-universal-access" aria-hidden="true"></i>
+									<i class="fa fa-rocket" aria-hidden="true"></i>
+				
+									<i class="fa fa-play normal" aria-hidden="true"></i>
+				
+												</button>
+								
+									<a href="" class="play" id="stop" hidden><i class="fa fa-pause" aria-hidden="true"></i></a>
+								
+										<audio id="player" controls hidden>
+											<source src="http://play.lactofm.ru:8001/stream" type="audio/mp3">
+										</audio>
+				
+				</div>
+				
+		</div>
+		
+		
+		
+		<div  id="line" class="page">
+		
+			<a id="order" href="#">Заказать трек</a>
+			<div id="cc_recenttracks_lactose" class="cc_recenttracks_list">Проверьте подключениие к сети...</div>
+		
+		</div>
+	</div>
  
  </div>
  <nav class="menu">
 	<button id="news" class="m-btn"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
 	<button id="home" class="m-btn active"><i class="fa fa-play" aria-hidden="true"></i></button>
-	<button id="line" class="m-btn"><i class="fa fa-podcast" aria-hidden="true"></i></button>
+	<button id="line" class="m-btn"><i class="fa fa-podcast" aria-hidden="true"></i> <span id="cc_strinfo_listeners_lactose" class="cc_streaminfo info-stat"></span> </button>
  </nav>
  
  
+ 
+ 
+ 
+<script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/recenttracks.js"></script> 
+<script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/streaminfo.js"></script>
 
+<script language="javascript" type="text/javascript">var username="lactose";</script>
+<script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/orders.js"></script>
  </body> 
 </html>
