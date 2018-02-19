@@ -1,56 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8" />
-	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<title></title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no" />
-	<link href="style.css" rel="stylesheet">
-	<icon src="icon.png" />
+ <head>
+   <title>Lactofm</title>
+   <meta charset="utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/play.js"></script>
 	
-		<script>
-
-	</script>
-	
-</head>
-
-<script language="javascript" type="text/javascript">
-function show_hide(id)
-{
-var id = document.getElementById(id) ;
-var c1 = document.getElementById("cont1") ;
-var c2 = document.getElementById("cont2") ;
-var c3 = document.getElementById("cont3") ;
-c1.style.display = "none" ;
-c2.style.display = "none" ;
-c3.style.display = "none" ;
-    if (id.style.display == "none")
-    {
-        id.style.display = "block";
-    }
-    else
-    {
-        id.style.display = "none";
-    }
-}  
-</script>
-
-<body>
-
-		<div class="wrapper">
-
-	<header class="header">
-	<center><a href="http://vk.com/lactofm"><img class="vk-gr" src="images/vk.png"/></a> </center> 
- <center> <img class="lgo" src="images/logo.png" alt="logo by mobifreaks"/> </center> 
-	</header><!-- .header-->
-<main class="content">	
-
-	
-<<<<<<< HEAD
  </head>
  <body>
  
@@ -89,7 +52,7 @@ c3.style.display = "none" ;
 									<a href="" class="play" id="stop" hidden><i class="fa fa-pause" aria-hidden="true"></i></a>
 								
 										<audio preload="none" id="player" controls hidden>
-											<source src="http://play.lactofm.ru:8001/stream" type="audio/mpeg">
+											<source src="http://play.lactofm.ru:8001/stream" type="audio/mp3">
 										</audio>
 				
 				</div>
@@ -99,68 +62,28 @@ c3.style.display = "none" ;
 		
 		
 		<div  id="line" class="page">
-=======
-
-
-    <div id="cont1">
-        
-	
-<center>
-	<audio id="player" src="http://178.33.138.231:8001/stream"></audio>
-<div>
-    <img onclick="document.getElementById('player').play()" src="images/play.png" onmouseover="this.src='images/playon.png';" width="180" height="180"/> </button>
-</div> 
-
-<a href="index.html"><img src="images/stop.png" alt="logo by mobifreaks"/></a>
-<br>
-Сейчас слушателей: <span id="cc_strinfo_listeners_lactose" class="cc_streaminfo"></span>
-	</center><!-- .content --> 
-
->>>>>>> 44b7a091ecd539aad84d99f4d1b91fcf34c08ef6
 		
-    </div>
-    <div id="cont2">
-	
-<center>
-<div id="cc_recenttracks_lactose" class="cc_recenttracks_list">Проверьте подключениие к сети...</div>
-<br>
-<br>
-
-
-</center>
+			<a id="order" href="#">Заказать трек</a>
+			<div id="cc_recenttracks_lactose" class="cc_recenttracks_list">Проверьте подключениие к сети...</div>
 		
-    </div>
-    <div id="cont3" style='overflow-x:hidden;'>
-<!-- <iframe src="https://oauth.vk.com/authorize?client_id=6253696&redirect_uri=http://m.lactofm.ru/mobi.html" title="iframe example 1"  width="100%" height="700" scrolling="no"> -->
-  <!-- <p>Your browser does not support iframes.</p> -->
-<!-- </iframe> -->
-
-     </div>
-	 </main>
-
-<footer class="footer">
-
-<h3 class="terak">ТРЕК: <br>
-<span id="cc_strinfo_song_lactose" class="cc_streaminfo">Проверьте подключениие к сети...</span><br /></h3>
-<div id="menu" style="display: table; margin: 0 auto; text-align: center;">
-    <div id="punkt1">
-        <a href="#" onclick="show_hide('cont1')" ><img src="images/trak.png"/></a>
-    </div><!--punkt1-->
-  <div id="punkt2">
-        <a href="#" onclick="show_hide('cont2')" ><img src="images/wi.png"/></a>
-    </div><!--punkt2-->
-  <div id="punkt3">
-        <a id="order" href="#" onclick="show_hide('cont3')" ><img src="images/chat.png"/></a>
-    </div><!--punkt3-->
-</div><!--menu-->
-
-	
-	
-</footer>
-<script type="text/javascript" src="https://debug1.phonegap.com/target/target-script-min.js#8ed2dd08-6e19-11e4-a58d-ca2dfefed588"></script><script type="text/javascript" src="https://debug1.phonegap.com/target/target-script-min.js#8ed2dd08-6e19-11e4-a58d-ca2dfefed588"></script></body>
+		</div>
+	</div>
+ 
+ </div>
+ <nav class="menu">
+	<button id="news" class="m-btn"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+	<button id="home" class="m-btn active"><i class="fa fa-play" aria-hidden="true"><span id="cc_strinfo_listeners_lactose" class="cc_streaminfo info-stat"></span></i></button>
+	<button id="line" class="m-btn"><i class="fa fa-podcast" aria-hidden="true"></i>  </button>
+ </nav>
+ 
+ 
+ 
+ 
+ 
+<script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/recenttracks.js"></script> 
 <script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/streaminfo.js"></script>
-<script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/recenttracks.js"></script>
+
 <script language="javascript" type="text/javascript">var username="lactose";</script>
 <script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/orders.js"></script>
-
+ </body> 
 </html>
