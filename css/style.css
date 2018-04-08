@@ -46,7 +46,7 @@ button.m-btn {
 }
 
 button.m-btn.active {color: #ea29f5;text-shadow: 0px 0px 20px #0014ff;transition: all 0.3s;border-bottom: 3px solid #f440ff;}
-
+button.m-btn.active .cc_streaminfo.info-stat, button.m-btn.active i.fa.fa-headphones{color: #f883ff !important;}
 .page {
     display: none;
 }
@@ -61,7 +61,7 @@ button.m-btn.active {color: #ea29f5;text-shadow: 0px 0px 20px #0014ff;transition
     height: inherit;
     display: inline-block;
     vertical-align: top;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
@@ -82,7 +82,7 @@ margin-top: 2vh;
 }
 
 .music-name {
-    background: linear-gradient(to right, #ff007296, #ff000794);
+    background: linear-gradient(to right, rgba(255, 0, 114, 0.58), rgba(255, 0, 7, 0.57));
     padding: 15px;
     font-size: 1.3em;
     margin-top: 2vh;
@@ -124,14 +124,17 @@ a#stop {
 span#cc_strinfo_listeners_lactose {
     position: absolute;
     font-size: 0.5em;
-    width: 100%;
-    left: 0;
+    width: 80%;
+    right: 0;
     bottom: 3px;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 div#line {
     background: #860a2e;
+    position: relative;
+    z-index: 1000;
+    overflow: auto;
 }
 
 
@@ -167,7 +170,7 @@ a.ccbuy {
 }
 
 div#cc_recenttracks_lactose {
-    height: 120%;
+    height: 32%;
     overflow: auto;
     padding-bottom: 20%;
 }
@@ -207,7 +210,20 @@ iframe.frmae {
 
 .soc a {
     color: white;
-    padding: 15px;
     text-decoration: none;
     text-transform: uppercase;
+    max-width: 480px;
+    display: block;
+    padding: 3px;
+}
+#tracks {
+    color: rgba(255, 0, 114, 1);
+}
+
+
+i.fa.fa-headphones {
+    position: absolute;
+    left: 0;
+    font-size: 25px;
+    bottom: 0;
 }
