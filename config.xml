@@ -159,8 +159,8 @@
     <!-- Define app splash screen for each platform. -->
 
 <platform name="android"/>
-<splash src="/splash.jpg" />
-<splash src="/res/screen/android/screen-mdpi-portrait.png" density="port-mdpi"/>
+<splash src="www/splash.jpg" />
+<splash src="www/res/screen/android/screen-mdpi-portrait.png" density="port-mdpi"/>
 
 
 
