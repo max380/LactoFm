@@ -158,7 +158,7 @@
 
     <!-- Define app splash screen for each platform. -->
 
-<platform name="android"/>
+
 <splash src="/splash.jpg" />
 
 
