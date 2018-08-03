@@ -160,8 +160,6 @@
 
 <platform name="android"/>
 <splash src="/splash.jpg" />
-<splash src="/res/screen/android/screen-mdpi-portrait.png" density="port-mdpi"/>
-
 
 
 
