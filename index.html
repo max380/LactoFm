@@ -14,6 +14,52 @@
 	<script src="js/menu.js"></script>
 	<script src="js/play.js"></script>
 	
+	<link href="http://78.155.217.167:8080/media/static/css/widget-status.css" rel="stylesheet">
+	
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+     $( document ).ready(function() {
+         function updateTrack(){
+             $.ajax({
+                 // Дополнительно передается два параметра
+                 // callback & format для получения данных
+                 // в формате JSONP. Это позволит преодолеть CORS ограничение
+                 url: "http://78.155.217.167:8080/api/history/?server=1&limit=1&callback=callback&format=jsonp",
+                 jsonp: "callback",
+                 dataType: "jsonp",
+                 method: "GET",
+                 success: function( response ) {
+                     var trackTitlte = response.objects[0].metadata;
+                     $("#track").text(trackTitlte);
+                 }
+             });
+         }
+         updateTrack();
+         setInterval(updateTrack, 5*1000);
+     });
+    </script>
+	<script>
+     $( document ).ready(function() {
+ function updateTrack(){
+             $.ajax({
+                 // Дополнительно передается два параметра
+                 // callback & format для получения данных
+                 // в формате JSONP. Это позволит преодолеть CORS ограничение
+                 url: "http://78.155.217.167:8080/api/channels/?server=1&callback=callback&format=jsonp",
+                 jsonp: "callback",
+                 dataType: "jsonp",
+                 method: "GET",
+                 success: function( response ) {
+                     var listenersTitlte = response.objects[0].listeners_air;
+                     $("#listeners").text(listenersTitlte);
+                 }
+             });
+         }
+         updateTrack();
+         setInterval(updateTrack, 5*1000);
+     });
+    </script>
+	
  </head>
  <body>
  
@@ -32,7 +78,7 @@
 		<div  id="home" class="page active"> 
 							<div class="cd"><img src="img/cd.png"></img></div>
 				
-							<center><div class="music-name"> <span id="cc_strinfo_song_lactose" class="cc_streaminfo">Загрузка ...</span> </div></center>
+							<center><div id="track" class="music-name"></div></center>
 				
 								<div class="player"><button onclick="document.getElementById('player').play(); document.getElementById('stop').style.display='block';document.getElementById('play-play').style.display='none';" id="play-play" class="play">
 				
@@ -64,7 +110,7 @@
 		<div  id="line" class="page">
 		
 	<!-- 		<a id="order" href="#">Заказать трек</a> -->
-			<div id="cc_recenttracks_lactose" class="cc_recenttracks_list">Проверьте подключениие к сети...</div>
+			<center><div id="RTWidgetStatus">Проверьте подключениие к сети...</div></center>
 		
 		</div>
 	</div>
@@ -72,18 +118,24 @@
  </div>
  <nav class="menu">
 	<button id="news" class="m-btn"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
-	<button id="home" class="m-btn active"><i class="fa fa-play" aria-hidden="true"><i class="fa fa-headphones" aria-hidden="true"></i><span id="cc_strinfo_listeners_lactose" class="cc_streaminfo info-stat"></span></i></button>
+	<button id="home" class="m-btn active"><i class="fa fa-play" aria-hidden="true"><i class="fa fa-headphones" aria-hidden="true"><span id="listeners"></span></i></i></button>
 	<button id="line" class="m-btn"><i class="fa fa-podcast" aria-hidden="true"></i>  </button>
  </nav>
  
  
+<script>
+if (typeof jQuery == 'undefined') { 
+  var i = "i";
+  document.write('<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></scr' + i + 'pt>');
+}
+</script>
+<script type="text/javascript" src="https://yandex.st/jquery/tmpl/1.0.0pre/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="http://78.155.217.167:8080/media/static/js/external/status-widget.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){new StatusWidget({"djImage":false,"djName":false,"listenersNum":false,"trackCurrent":false,"history":true}, 1, "http://78.155.217.167:8080", "#RTWidgetStatus", "ru");});
+</script>
  
  
- 
-<script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/recenttracks.js"></script> 
-<script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/streaminfo.js"></script>
 
-<script language="javascript" type="text/javascript">var username="lactose";</script>
-<script language="javascript" type="text/javascript" src="http://aska.ru-hoster.com:2199/system/orders.js"></script>
  </body> 
 </html>
