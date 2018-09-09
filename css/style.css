@@ -72,11 +72,7 @@ div#home {
     background-position: center top;
 }
 
-.cd {   
-margin: auto; 
-text-align: center;
-margin-top: 2vh;
-}
+.cd {margin: auto;text-align: center;margin-top: 0vh;}
 .cd>img{
     height: 30vh;
 }
@@ -222,7 +218,155 @@ iframe.frmae {
 
 i.fa.fa-headphones {
     position: absolute;
-    left: 0;
+    left: 15%;
     font-size: 25px;
     bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.track_st_widget.text-centered {
+    background: none !important;
+}
+
+.track_st_widget.text-centered img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.track_st_track-meta {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+
+
+div#track_st_vote-row div {
+    display: inline-block;
+}
+
+div#track_st_vote-row {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div#trackProgressWrap {
+    position: relative;
+    background: linear-gradient(to right, rgb(255, 1, 87), rgba(224, 65, 212, 0.5803921568627451)) !important;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.track_st_progress-text {
+    /* position: absolute; */
+}
+
+.track_st_progress-bar.track_st_progress {
+    position: relative;
+    transition: all 1.5s;
+    background: #0000007a !important;
+}
+
+.track_st_progress-text {
+    margin-top: -25px;
+    z-index: 1000;
+    position: absolute;
+}
+
+
+
+
+.RTWidgetTrackRequests {
+    display: none;
+    position: absolute !important;
+    left: 10vw;
+    top: 5vh;
+    z-index: 1000;
+    width: 80vw;
+    height: 90vh;
+    overflow: auto;
+    box-shadow: 0px 0px 1000px 90px black;
+}
+
+.RTWidgetTrackRequests2 {
+    position: absolute;
+    z-index: 1000;
+    right: 9vw;
+    top: 2vh;
+    font-family: cursive;
+    font-size: 50px;
+    padding: 0px 11px;
+    color: #d84242;
+    display: none;
+    text-shadow: 0px 0px 30px black, 0px 0px 80px black;
+}
+
+.RTWidgetTrackRequests.active {
+    display: block;
+    /* overflow: hidden; */
+    background: white;
+}
+
+.RTWidgetTrackRequests2.active {
+    display: block;
+}
+
+.Messages {
+    position: absolute;
+    top: 0;
+    left: 20px;
+	transition: all 0.3s;
+}
+
+.Messages.active {
+    top: -30vh;
+    height: 200px;
+    overflow: auto;
+	transition: all 0.3s;
+}
+
+
+div#RTWidgetStatus {
+    margin: auto;
+    width: 80%;
+    margin-top: 10vh;
+    height: 75vh;
+    overflow: auto;
+}
+
+div#RTWidgetStatus>table {
+    width: 100%;
+}
+
+
+@media (max-width: 540px) {
+	
+	
+	.track_st_track-meta {
+    font-size: 12px !important;
+}
+
+div#track_st_vote-row svg {
+    width: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+div#trackProgressWrap {
+    height: 10px !important;
+    font-size: 9px;
 }
