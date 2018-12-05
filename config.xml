@@ -153,6 +153,12 @@
 
     <icon src="icon.png" />
 
+	<!-- iPhone 6 / 6+ -->
+	<icon src="icon.png"" platform="ios" width="180" height="180" />
+
+	<!-- iPhone / iPod Touch  -->
+	<icon src="icon.png"" platform="ios" width="60" height="60" />
+	<icon src="icon.png"" platform="ios" width="120" height="120" />
 
 
 
