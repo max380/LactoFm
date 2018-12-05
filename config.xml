@@ -153,7 +153,27 @@
 
     <icon src="icon.png" />
 
+	<!-- iPhone 6 / 6+ -->
+	<icon src="icon.png"" platform="ios" width="180" height="180" />
 
+	<!-- iPhone / iPod Touch  -->
+	<icon src="icon.png"" platform="ios" width="60" height="60" />
+	<icon src="icon.png"" platform="ios" width="120" height="120" />
+
+	<!-- iPad -->
+	<icon src="icon.png"" platform="ios" width="76" height="76" />
+	<icon src="icon.png"" platform="ios" width="152" height="152" />
+	<icon src="icon.png"" platform="ios" width="167" height="167" />
+
+	<!-- Settings Icon -->
+	<icon src="icon.png"" platform="ios" width="29" height="29" />
+	<icon src="icon.png"" platform="ios" width="58" height="58" />
+	<icon src="icon.png"" platform="ios" width="87" height="87" />
+
+	<!-- Spotlight Icon -->
+	<icon src="icon.png"" platform="ios" width="40" height="40" />
+	<icon src="icon.png"" platform="ios" width="80" height="80" />
+	<icon src="icon.png"" platform="ios" width="120" height="120" />
 
 
     <!-- Define app splash screen for each platform. -->
