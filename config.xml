@@ -132,7 +132,7 @@
 
     <plugin name="cordova-plugin-vibration" />  -->
 	<plugin name="urbanairship-cordova" version="7.5.1"/>
-	<plugin name="cordova-support-google-services" version="1.2.1"/>
+	<plugin name="google-services" version="4.2.0"/>
 
 
 
@@ -242,6 +242,8 @@
 
         <allow-intent href="market:*" />
 
+		<resource-file src="google-services.json" target="app/google-services.json" />
+		
     </platform>
 
     <platform name="ios">
