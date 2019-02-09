@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1004446604806",
+    "firebase_url": "https://lactosefm.firebaseio.com",
+    "project_id": "lactosefm",
+    "storage_bucket": "lactosefm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004446604806:android:3aa20c35a65d2061",
+        "android_client_info": {
+          "package_name": "com.lactofm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004446604806-9uh1n7lv1shidnfin9i5p6sb1rcsv8s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLraZdAM8z-V8hxeITgh6UDwei6DmBsbM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
