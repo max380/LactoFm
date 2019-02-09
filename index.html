@@ -59,10 +59,194 @@
          setInterval(updateTrack, 5*1000);
      });
     </script>
-	
+	 <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+      var onDeviceReady = function() {
+        console.log("Device ready!")
+        // Incoming message callback
+        var onPushReceived = function(event) {
+          if (event.message) {
+            console.log("Received push: " + event.message)
+          } else {
+            console.log("No incoming message")
+          }
+        }
+         // Notification opened callback
+        var notificationOpened = function(event) {
+          if (event.message) {
+            console.log("Notification opened: " + event.message)
+          } else {
+            console.log("No incoming message")
+          }
+        }
+        // Registration callback
+        var onRegistration = function(event)  {
+          if (!event.error) {
+            console.log("Reg Success: " + event.channelID)
+            $('#id').text(event.channelID)
+          } else {
+            console.log(event.error)
+          }
+        }
+        // Deep link callback
+        var handleDeepLink = function(event)  {
+            console.log("Deep link: " + event.deepLink)
+        }
+        // Register for any urban airship events
+        document.addEventListener("urbanairship.registration", onRegistration, false)
+        document.addEventListener("urbanairship.push", onPushReceived, false)
+        document.addEventListener("urbanairship.notification_opened", notificationOpened, false)
+        document.addEventListener("urbanairship.deep_link", handleDeepLink, false)
+        
+        // Handle resume
+        document.addEventListener("resume", function() {
+          console.log("Device resume!")
+          
+          UAirship.resetBadge()
+          // Reregister for urbanairship events if they were removed in pause event
+          document.addEventListener("urbanairship.registration", onRegistration, false)
+          document.addEventListener("urbanairship.push", onPushReceived, false)
+        }, false)
+        // Handle pause
+        document.addEventListener("pause", function() {
+          console.log("Device pause!")
+         
+          // Remove urbanairship events.  Important on android to not receive push in the background.
+          document.removeEventListener("urbanairship.registration", onRegistration, false)
+          document.removeEventListener("urbanairship.push", onPushReceived, false)
+        }, false)
+        // Initiate the UI
+        initiateUI()
+        
+        // Get the launch notification if its available.
+      }
+      // Initiates the UI and sets up any UI callbacks
+      var initiateUI = function() {
+        // Add tag to the UI
+        var addTag = function(tag) {
+          var $tag = $("<p>" + tag + "</p>")
+          var $removeButton = $("<input type='button' class='removeTagButton' value='Remove' />")
+          $tag.append($removeButton)
+          $("#tags").prepend($tag)
+          $removeButton.on("click", function(ev) {
+            $tag.remove()
+            // Remove the tag from the current list of tags
+            UAirship.getTags(function(tags) {
+              console.log("Removing tag: " + tag)
+              tags.splice(tags.indexOf(tag), 1)
+              UAirship.setTags(tags)
+            })
+          })
+        }
+        // Set the namedUser in the UI
+        var setNamedUser = function(namedUser) {
+          $("#namedUser").text(namedUser)
+          $("#setNamedUserField").val("")
+        }
+        // Vibrate and Sound is only available on Android
+        if (device.platform != "Android") {
+          $("#soundEnabledSection").hide()
+          $("#vibrateEnabledSection").hide()
+        }
+        // Update the interface with the current UA settings
+        UAirship.isUserNotificationsEnabled(function(isEnabled) {
+          $('#pushEnabled').val(isEnabled ? 'on' : 'off').change()
+        })
+        UAirship.isSoundEnabled(function(isEnabled) {
+          $('#soundEnabled').val(isEnabled ? 'on' : 'off').change()
+        })
+        UAirship.isVibrateEnabled(function(isEnabled) {
+          $('#vibrateEnabled').val(isEnabled ? 'on' : 'off').change()
+        })
+        UAirship.isQuietTimeEnabled(function(isEnabled) {
+          $('#quietTimeEnabled').val(isEnabled ? 'on' : 'off').change()
+        })
+        UAirship.isLocationEnabled(function(isEnabled) {
+          $('#locationEnabled').val(isEnabled ? 'on' : 'off').change()
+        })
+        UAirship.getChannelID(function(id) {
+          if(id) {
+             console.log("Got channel ID: " + id)
+             $('#id').text(id)
+          }
+        })
+        UAirship.getNamedUser(function(namedUser) {
+          if(namedUser) {
+            console.log("Got namedUser: " + namedUser)
+            setNamedUser(namedUser)
+          }
+        })
+        UAirship.getTags(function(tags) {
+          tags.forEach(function(tag) {
+            addTag(tag)
+          })
+        })
+        UAirship.getQuietTime(function(obj) {
+          $("#startHour").val(obj.startHour)
+          $("#startMinute").val(obj.startMinute)
+          $("#endHour").val(obj.endHour)
+          $("#endMinute").val(obj.endMinute)
+        })
+        // Set up change callbacks for the UI elements
+        $('#pushEnabled').change(function() {
+          var isEnabled = ($('#pushEnabled').val() == "on")
+          UAirship.setUserNotificationsEnabled(isEnabled)
+        })
+        $('#locationEnabled').change(function() {
+          var isEnabled = ($('#locationEnabled').val() == "on")
+          UAirship.setLocationEnabled(isEnabled)
+        })
+        $('#soundEnabled').change(function() {
+          var isEnabled = ($('#soundEnabled').val() == "on")
+          UAirship.setSoundEnabled(isEnabled)
+        })
+        $('#vibrateEnabled').change(function() {
+          var isEnabled = ($('#vibrateEnabled').val() == "on")
+          UAirship.setVibrateEnabled(isEnabled)
+        })
+        $('#quietTimeEnabled').change(function() {
+          var isEnabled = ($('#quietTimeEnabled').val() == "on")
+          UAirship.setQuietTimeEnabled(isEnabled)
+        })
+        $("#displayMessageCenterButton").click(function(ev) {
+          console.log("Displaying Message Center")
+          UAirship.displayMessageCenter()
+          })
+        $("#addTagButton").click(function(ev) {
+          var tag = $("#addTagField").val()
+          console.log("Adding new tag: " + tag)
+          UAirship.getTags(function(tags) {
+            if(tags.indexOf(tag) == -1) {
+              console.log("Valid tag: " + tag)
+              tags = tags.concat([tag])
+              UAirship.setTags(tags, function() {
+                addTag(tag)
+                $("#addTagField").val('')
+              })
+            }
+          })
+        })
+        $("#setQuietTimeButton").click(function(ev) {
+          var startHour = parseInt($("#startHour").val())
+          var startMinute = parseInt($("#startMinute").val())
+          var endHour = parseInt($("#endHour").val())
+          var endMinute = parseInt($("#endMinute").val())
+          UAirship.setQuietTime(startHour, startMinute, endHour, endMinute, function() {
+            console.log("Set quiet time from JS")
+          })
+        })
+        $("#setNamedUserButton").click(function(ev) {
+          var namedUser = $("#setNamedUserField").val()
+          UAirship.setNamedUser(namedUser, function() {
+            setNamedUser(namedUser)
+          })
+        })
+      }
+      document.addEventListener("deviceready", onDeviceReady, false)
+    </script>
  </head>
  <body>
- 
+
  <div class="body">
  
 	<div class="content">
