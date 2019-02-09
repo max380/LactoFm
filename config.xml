@@ -241,6 +241,8 @@
     <platform name="android">
 
         <allow-intent href="market:*" />
+		
+		<resource-file src="google-services.json" target="app/google-services.json" />
 
     </platform>
 
@@ -255,10 +257,11 @@
 
 
 <!-- Urban Airship app credentials -->
-<preference name="com.urbanairship.production_app_key" value="U_L527YmQzC92ShoeL7BlQ" />
-<preference name="com.urbanairship.production_app_secret" value="L-0sqeAWRUyiYEvV-hjUsQ" />
-<preference name="com.urbanairship.development_app_key" value="U_L527YmQzC92ShoeL7BlQ" />
-<preference name="com.urbanairship.development_app_secret" value="L-0sqeAWRUyiYEvV-hjUsQ" />
+<preference name="com.urbanairship.production_app_key" value="BLWekZepQl6QVbNXtj6lKg" />
+<preference name="com.urbanairship.production_app_secret" value="BMgahmnrSaehMGU-TV-ZWA" />
+<preference name="com.urbanairship.development_app_key" value="BLWekZepQl6QVbNXtj6lKg" />
+<preference name="com.urbanairship.development_app_secret" value="BMgahmnrSaehMGU-TV-ZWA" />
+<preference name="com.urbanairship.gcm_sender" value="AAAA6d2u3gY:APA91bE30JsMBbGjy5cl8bCzWhu7wVExFzkWC-fZ68WJLKlm8RUSwkwHgo84QkxWXi9lXH2ZtkG4tM2ZPd68AQqrhDLmHOEuVkGQ_7LING6PQBo0Z5N4c9qwZCYaeZNe5AbcbgqTzPv3" />
 <!-- If the app is in production or not -->
 <preference name="com.urbanairship.in_production" value="false" />
 <!-- Optional config values -->
