@@ -10,7 +10,7 @@
 
         id        = "com.lactofm"
 
-        version   = "1.7">
+        version   = "1.8">
 
 
 
@@ -254,4 +254,30 @@
 
 
 
+<!-- Urban Airship app credentials -->
+<preference name="com.urbanairship.production_app_key" value="U_L527YmQzC92ShoeL7BlQ" />
+<preference name="com.urbanairship.production_app_secret" value="L-0sqeAWRUyiYEvV-hjUsQ" />
+<preference name="com.urbanairship.development_app_key" value="U_L527YmQzC92ShoeL7BlQ" />
+<preference name="com.urbanairship.development_app_secret" value="L-0sqeAWRUyiYEvV-hjUsQ" />
+<!-- If the app is in production or not -->
+<preference name="com.urbanairship.in_production" value="false" />
+<!-- Optional config values -->
+<!-- Enable push when the application launches -->
+<preference name="com.urbanairship.enable_push_onlaunch" value="true" />
+<!-- Enable Analytics when the application launches -->
+<!-- Warning: Features that depend on analytics being enabled may not work properly if analytics is disabled (reports, location segmentation, region triggers, push to local time). -->
+<preference name="com.urbanairship.enable_analytics" value="true" />
+<preference name="com.urbanairship.development_log_level" value="debug" />
+<!-- Override the Android notification icon -->
+<preference name="com.urbanairship.notification_icon" value="ic_notification" />
+<!-- Specify the notification accent color for Android API 21+ (Lollipop) -->
+<preference name="com.urbanairship.notification_accent_color" value="#0000ff" />
+<!-- Clear the iOS badge on launch -->
+<preference name="com.urbanairship.clear_badge_onlaunch" value="true" />
+<!-- iOS 10 alert foreground notification presentation option -->
+<preference name="com.urbanairship.ios_foreground_notification_presentation_alert" value="true"/>
+<!-- iOS 10 badge foreground notification presentation option -->
+<preference name="com.urbanairship.ios_foreground_notification_presentation_badge" value="true"/>
+<!-- iOS 10 sound foreground notification presentation option -->
+<preference name="com.urbanairship.ios_foreground_notification_presentation_sound" value="true"/>
 </widget>
