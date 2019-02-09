@@ -131,7 +131,6 @@
     <plugin name="cordova-plugin-network-information" /> 
 
     <plugin name="cordova-plugin-vibration" />  -->
-	<plugin name="urbanairship-cordova" version="7.5.1"/>
 
 
 
@@ -241,9 +240,7 @@
 
         <allow-intent href="market:*" />
 
-		<resource-file src="google-services.json" target="app/google-services.json" />
-		
-    </platform>
+	</platform>
 
     <platform name="ios">
 
