@@ -246,7 +246,94 @@
     </script>
  </head>
  <body>
- 
+   <div data-role="page" id="page">
+
+    <div data-role="header" class="ui-bar ui-bar-b">
+      <center>
+        <img border="0" src="img/logo.png" alt="Urban Airship" align="center" />
+      </center>
+    </div>
+
+    <div data-role="content">
+      <form>
+        <div class="ui-body ui-body-b">
+
+          <div data-role="fieldcontain">
+            <label for="id">Channel ID:</label><br />
+            <span name="id" id="id" style="word-wrap: break-word;"></span>
+            <center><h3>Push Settings</h3></center>
+            <label>NamedUser: </label>
+            <span name="namedUser" id="namedUser"></span><hr />
+            <input type="text" name="setNamedUserField" id="setNamedUserField" style="width:96.5%;" /> <input type="button" id="setNamedUserButton" value="Set namedUser" />
+          </div>
+
+          <div data-role="controlgroup">
+            <label for="pushEnabled">Push Enabled</label>
+            <select name="pushEnabled" id="pushEnabled" data-role="slider" data-theme="c" data-track-theme="c">
+              <option value="off">Off</option>
+              <option value="on">On</option>
+            </select>
+          </div>
+
+          <div data-role="controlgroup">
+            <span id="soundEnabledSection">
+              <label for="soundEnabled">Sound Enabled</label>
+              <select name="soundEnabled" id="soundEnabled" data-role="slider" data-theme="c" data-track-theme="c">
+                <option value="off">Off</option>
+                <option value="on">On</option>
+              </select>
+            </span>
+          </div>
+
+          <div data-role="controlgroup">
+            <span id="vibrateEnabledSection">
+              <label for="vibrateEnabled">Vibrate Enabled</label>
+              <select name="vibrateEnabled" id="vibrateEnabled" data-role="slider" data-theme="c" data-track-theme="c">
+                <option value="off">Off</option>
+                <option value="on">On</option>
+              </select>
+            </span>
+          </div>
+
+          <div data-role="controlgroup">
+            <label for="locationEnabled">Location Enabled</label>
+            <select name="locationEnabled" id="locationEnabled" data-role="slider" data-theme="c" data-track-theme="c">
+              <option value="off">Off</option>
+              <option value="on">On</option>
+            </select>
+          </div>
+
+          <div data-role="controlgroup">
+            <label for="quietTimeEnabled">Quiet Time Enabled</label>
+            <span id="quietTimeEnabledSection">
+              <select name="quietTimeEnabled" id="quietTimeEnabled" data-role="slider" data-theme="c" data-track-theme="c">
+                <option value="off">Off</option>
+                <option value="on">On</option>
+              </select>
+            </span>
+          </div>
+
+          <div data-role="fieldcontain">
+            <label for="startHour">Start Time (24h)</label>
+            <input name="startHour" style="width: 3em; margin-left: -5px;" id="startHour" />:<input name="startMinute" style="width: 3em;" id="startMinute" /><br />
+            <label for="startHour">End Time (24h)</label>
+            <input name="endHour" style="width: 3em;" id="endHour" />:<input name="endMinute" style="width: 3em;" id="endMinute" />
+            <input type="button" id="setQuietTimeButton" value="Set Quiet Time" />
+          </div>
+
+          <div data-role="fieldcontain">
+            <input name="addTagField" id="addTagField" />
+            <input type="button" id="addTagButton" value="Add tag" />
+            <div id="tags"></div>
+          </div>
+
+          <input type="button" id="displayMessageCenterButton" value="Display MC" />
+
+        </div>
+      </form>
+    </div>
+
+  </div>
  <div class="body">
  
 	<div class="content">
