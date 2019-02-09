@@ -10,7 +10,11 @@
 
         id        = "com.lactofm"
 
+<<<<<<< HEAD
         version   = "1.8">
+=======
+        version   = "1.6">
+>>>>>>> parent of 65e3fb9... ver1.7
 
 
 
