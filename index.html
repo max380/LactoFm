@@ -16,53 +16,13 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script src="js/menu.js"></script>
 	<script src="js/play.js"></script>
+	<script src="js/stat.js"></script>
+
 
 	
 	<link href="http://78.155.217.167:8080/media/static/css/widget-status.css" rel="stylesheet">
 	
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script>
-     $( document ).ready(function() {
-         function updateTrack(){
-             $.ajax({
-                 // Дополнительно передается два параметра
-                 // callback & format для получения данных
-                 // в формате JSONP. Это позволит преодолеть CORS ограничение
-                 url: "http://78.155.217.167:8080/api/history/?server=1&limit=1&callback=callback&format=jsonp",
-                 jsonp: "callback",
-                 dataType: "jsonp",
-                 method: "GET",
-                 success: function( response ) {
-                     var trackTitlte = response.objects[0].metadata;
-                     $("#track").text(trackTitlte);
-                 }
-             });
-         }
-         updateTrack();
-         setInterval(updateTrack, 5*1000);
-     });
-    </script>
-	<script>
-     $( document ).ready(function() {
- function updateTrack(){
-             $.ajax({
-                 // Дополнительно передается два параметра
-                 // callback & format для получения данных
-                 // в формате JSONP. Это позволит преодолеть CORS ограничение
-                 url: "http://78.155.217.167:8080/api/channels/?server=1&callback=callback&format=jsonp",
-                 jsonp: "callback",
-                 dataType: "jsonp",
-                 method: "GET",
-                 success: function( response ) {
-                     var listenersTitlte = response.objects[0].listeners_air;
-                     $("#listeners").text(listenersTitlte);
-                 }
-             });
-         }
-         updateTrack();
-         setInterval(updateTrack, 5*1000);
-     });
-    </script>
 	
  </head>
  <body>
@@ -72,9 +32,16 @@
 	<div class="content">
 		<div  id="news" class="page">
 			<div class="soc">
-				<center><a href="http://vk.com/lactofm"><img src="img/vk.png"></a></center>
+				<center><a href="http://vk.com/lactofm"><img src="img/vk.png"></a></center>	
 			</div>
-			<iframe class="frmae" src="http://lactofm.ru/index.php/mobile"></iframe>
+			<!-- <iframe class="frmae" src="http://lactofm.ru/index.php/mobile"></iframe> -->
+			<script type="text/javascript" class="frame" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="102151/"></script>	
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 		</div>
 		
 		
@@ -116,9 +83,65 @@
 		
 		
 		<div  id="line" class="page">
-		
+<center>		
 		<a id="order" href="#">Заказать трек</a> 
-			<center><div id="RTWidgetStatus">Проверьте подключениие к сети...</div></center>
+			<div class="cctrack" style="overflow: hidden;border-radius: 20px;">
+
+			
+			
+<table>
+<tr>
+        <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">1</td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track1" style="display: inline-block;vertical-align: middle;">Нет интернета!</span></td>
+    </tr>
+    <tr>
+        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">2</td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track2" style="display: inline-block;vertical-align: middle;"></span></td>
+    </tr>
+    <tr>
+         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">3</td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track3" style="display: inline-block;vertical-align: middle;"></span></td>
+    </tr>
+    <tr>
+        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">4</td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track4" style="display: inline-block;vertical-align: middle;"></span></td>
+    </tr>
+    <tr>
+         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">5</td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track5" style="display: inline-block;vertical-align: middle;"></td>
+    </tr>
+    <tr>
+        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">6</td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track6" style="display: inline-block;vertical-align: middle;"></span></td>
+    </tr>
+    <tr>
+         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">7</td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track7" style="display: inline-block;vertical-align: middle;""></td>
+    </tr>
+    <tr>
+        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">8</td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track8" style="display: inline-block;vertical-align: middle;"></span></td>
+    </tr>
+    <tr>
+         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">9</td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track9" style="display: inline-block;vertical-align: middle;""></td>
+    </tr>
+    <tr>
+        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">10</td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track10" style="display: inline-block;vertical-align: middle;"></span></td>
+    </tr>
+</table>
+</center>
+
+			</div>
+	
+			<br>
+<br>
+<br>
+<br>
+<br>
+
+
 		
 		</div>
 	</div>
@@ -202,17 +225,8 @@ $(".Messages").toggleClass("active");
 }
 );
 </script>
-<script>
-if (typeof jQuery == 'undefined') { 
-  var i = "i";
-  document.write('<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></scr' + i + 'pt>');
-}
-</script>
-<script type="text/javascript" src="https://yandex.st/jquery/tmpl/1.0.0pre/jquery.tmpl.min.js"></script>
-<script type="text/javascript" src="http://78.155.217.167:8080/media/static/js/external/status-widget.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function(){new StatusWidget({"djImage":false,"djName":false,"listenersNum":false,"trackCurrent":false,"history":true}, 1, "http://78.155.217.167:8080", "#RTWidgetStatus", "ru");});
-</script>
+
+
  
  <link rel="stylesheet" type="text/css" href="http://78.155.217.167:8080/media/static/css/request_track_widget/request_widget.css" />
 <script type="text/javascript" src="http://78.155.217.167:8080/media/static/js/request_track_widget/request_widget.js"></script>
