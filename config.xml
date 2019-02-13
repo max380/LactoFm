@@ -161,6 +161,7 @@
     <!-- Define app icon for each platform. -->
 
     <icon src="icon.png" />
+	<splash src="splash.png" />
 
 	<!-- iPhone 6 / 6+ -->
 	<icon src="res/icon/ios/icon-60@3x.png" platform="ios" width="180" height="180" />
