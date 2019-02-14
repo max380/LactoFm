@@ -10,7 +10,7 @@
 
         id        = "com.lactofm"
 
-        version   = "2.0">
+        version   = "2.1">
 
 
 
@@ -251,6 +251,8 @@
     <platform name="android">
 
         <allow-intent href="market:*" />
+
+		<resource-file src="/ic_onesignal_large_icon_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" />
 
     </platform>
 
