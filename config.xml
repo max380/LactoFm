@@ -256,6 +256,8 @@
 		
 		<resource-file src="/res/raw/onesignal_default_sound.mp3" target="app/src/main/res/raw/onesignal_default_sound.mp3" />
 		
+		<resource-file src="/res/raw/eror404.mp3.mp3" target="app/src/main/res/raw/eror404.mp3.mp3" />
+		
 		<resource-file src="/res/drawable-mdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-mdpi/ic_stat_onesignal_default.png" />
 		<resource-file src="/res/drawable-hdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-hdpi/ic_stat_onesignal_default.png" />
 		<resource-file src="/res/drawable-xhdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-xhdpi/ic_stat_onesignal_default.png" />
