@@ -143,11 +143,8 @@
 
 	
 <!-- Windows 10 (default): -->
-<preference name="windows-appx-target" value="uap" />
-<!-- Windows 8.1: -->
-<preference name="windows-appx-target" value="8.1-win" />
-<!-- Windows Phone 8.1: -->
-<preference name="windows-appx-target" value="8.1-phone" />
+<preference name="CN=34C94B7A-C3C9-4431-83A9-58AEC17AC5B3" value="uap" />
+
 
 
 
