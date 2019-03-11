@@ -1,0 +1,33 @@
+ <head>
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link href="css/play.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/play.js"></script>
+	<script src="js/jquery-2.2.4.min.js"></script>
+
+	
+	 </head>
+	 <body>
+								<div class="player"><button onclick="document.getElementById('player').play(); document.getElementById('stop').style.display='block';document.getElementById('play-play').style.display='none';" id="play-play" class="play">
+				
+									<i class="fa fa-grav" aria-hidden="true"></i>
+									<i class="fa fa-snowflake-o" aria-hidden="true"></i>
+									<i class="fa fa-bomb" aria-hidden="true"></i>
+									<i class="fa fa-cog" aria-hidden="true"></i>
+									<i class="fa fa-globe" aria-hidden="true"></i>
+									<i class="fa fa-life-ring" aria-hidden="true"></i>
+									<i class="fa fa-universal-access" aria-hidden="true"></i>
+									<i class="fa fa-rocket" aria-hidden="true"></i>
+				
+									<i class="fa fa-play normal" aria-hidden="true"></i>
+				
+												</button>
+								
+									<a href="" class="play" id="stop" hidden><i class="fa fa-pause" aria-hidden="true"></i></a>
+								
+										<audio preload="none" id="player" controls hidden>
+											<source src="http://play.lactofm.ru:8000/radio" type="audio/mpeg">
+										</audio>
+		</body>

@@ -1,0 +1,100 @@
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+nav.menu {
+    width: 100vw;
+    height: 18vh;
+    padding-top: 7vh;
+    background: url(../img/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+}
+
+button.m-btn {
+    background: none;
+    border: none;
+    color: #dedede;
+    font-size: 2.2em;
+    padding: 5vh;
+    text-shadow: 0px 0px 40px black;
+    transition: all 0.3s;
+    position: relative;
+}
+
+button.m-btn.active {color: #ea29f5;text-shadow: 0px 0px 20px #0014ff;transition: all 0.3s;border-bottom: 3px solid #f440ff;}
+button.m-btn.active .cc_streaminfo.info-stat, button.m-btn.active i.fa.fa-headphones{color: #f883ff !important;}
+.page {
+    display: none;
+}
+
+.content {
+    height: inherit;
+    width: 310vw;
+}
+
+.content>.page {
+    width: 100vw;
+    height: inherit;
+    display: inline-block;
+    vertical-align: top;
+    /* overflow: hidden; */
+}
+
+
+div#home {
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.cd {margin: auto;text-align: center;margin-top: 0vh;}
+.cd>img{
+    height: 30vh;
+}
+
+.music-name {
+    background: linear-gradient(to right, rgba(255, 0, 114, 0.58), rgba(255, 0, 7, 0.57));
+    padding: 15px;
+    font-size: 1.3em;
+    margin-top: 2vh;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+button.play {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 7em;
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.player {
+    text-align: center;
+    margin: auto;
+}
+
+button.play>i {
+    display: none;
+}
+
+button.play>i.active {
+    display: block;
+}
+
+a#stop {
+    color: white;
+    font-size: 7em;
+    margin-top: 4vh;
+    text-align: center;
+    text-shadow: 0px 0px 15px #ffffff85;
+}

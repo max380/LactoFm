@@ -78,7 +78,7 @@ div#home {
 }
 
 .music-name {
-    background: linear-gradient(to right, rgba(255, 0, 114, 0.58), rgba(255, 0, 7, 0.57));
+    background: linear-gradient(to right, rgba(254, 145, 74, 0.58), rgba(255, 146, 74, 0.57));
     padding: 15px;
     font-size: 1.3em;
     margin-top: 2vh;
@@ -127,7 +127,7 @@ span#cc_strinfo_listeners_lactose {
 }
 
 div#line {
-    background: #860a2e;
+    background: #ffb281;
     position: relative;
     z-index: 1000;
     overflow: auto;
