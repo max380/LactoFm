@@ -255,7 +255,7 @@ $(".Messages").toggleClass("active");
 
   }
 
-
+	if(window.AdMob) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:true} );
 
   function createSelectedBanner(){
 
