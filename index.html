@@ -159,7 +159,85 @@
 	<button id="home" class="m-btn active"><i class="fa fa-play" aria-hidden="true"><i class="fa fa-headphones" aria-hidden="true"><span id="listeners"></span></i></i></button>
 	<button id="line" class="m-btn"><i class="fa fa-podcast" aria-hidden="true"></i>  </button>
  </nav>
-  <script>
+ 
+ 
+ 
+ <div id="RTWidgetTrackRequests" class="RTWidgetTrackRequests">
+
+
+
+
+
+
+<div class="sc-track-request-widget">
+<div is="track-request-widget" 
+lang="ru" 
+api-base="http://78.155.217.167:8080/api/v2" 
+server-id="1" 
+ip-timeout="1700000"
+track-timeout="3500000"
+bgcolor="#ffffff"
+bgopacity="0"
+tracks_num="5"
+track_width="180"
+track_image_default="http://78.155.217.167:8080/media/tracks/default_track_img.png"
+meta_font_size="14"
+meta_font_style="normal"
+meta_font_color="#8000ff"
+meta_opacity="1"
+button_color="#ffffff"
+button_color_active="#b79ce2"
+button_font_color="#8000ff"
+button_font_size="14"
+ordering="1"
+allow_person_and_message="true"
+modal_background_color="#ffffff"
+modal_font_color="#8000ff"
+modal_background_opacity="1"
+>
+</div>
+</div>
+
+
+
+
+
+</div>
+<div class="RTWidgetTrackRequests2"><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+ 
+ 
+ 
+ <script>
+$(document).ready(
+function(){
+	
+$("#order").on('click', function() {
+	
+	$(".RTWidgetTrackRequests").addClass("active");
+	$(".RTWidgetTrackRequests2").addClass("active");
+	
+});
+
+$(".RTWidgetTrackRequests2").on('click', function() {
+	$(".RTWidgetTrackRequests").removeClass("active");
+	$(".RTWidgetTrackRequests2").removeClass("active");
+	
+});
+
+
+$(".Messages").on('click', function() {
+$(".Messages").toggleClass("active");
+});
+	
+}
+);
+</script>
+
+
+ 
+ <link rel="stylesheet" type="text/css" href="http://78.155.217.167:8080/media/static/css/request_track_widget/request_widget.css" />
+<script type="text/javascript" src="http://78.155.217.167:8080/media/static/js/request_track_widget/request_widget.js"></script>
+ <script>
 
   // place our admob ad unit id here
 
@@ -468,83 +546,5 @@
 
 
 </script>
- 
- 
- <div id="RTWidgetTrackRequests" class="RTWidgetTrackRequests">
-
-
-
-
-
-
-<div class="sc-track-request-widget">
-<div is="track-request-widget" 
-lang="ru" 
-api-base="http://78.155.217.167:8080/api/v2" 
-server-id="1" 
-ip-timeout="1700000"
-track-timeout="3500000"
-bgcolor="#ffffff"
-bgopacity="0"
-tracks_num="5"
-track_width="180"
-track_image_default="http://78.155.217.167:8080/media/tracks/default_track_img.png"
-meta_font_size="14"
-meta_font_style="normal"
-meta_font_color="#8000ff"
-meta_opacity="1"
-button_color="#ffffff"
-button_color_active="#b79ce2"
-button_font_color="#8000ff"
-button_font_size="14"
-ordering="1"
-allow_person_and_message="true"
-modal_background_color="#ffffff"
-modal_font_color="#8000ff"
-modal_background_opacity="1"
->
-</div>
-</div>
-
-
-
-
-
-</div>
-<div class="RTWidgetTrackRequests2"><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
- 
- 
- 
- <script>
-$(document).ready(
-function(){
-	
-$("#order").on('click', function() {
-	
-	$(".RTWidgetTrackRequests").addClass("active");
-	$(".RTWidgetTrackRequests2").addClass("active");
-	
-});
-
-$(".RTWidgetTrackRequests2").on('click', function() {
-	$(".RTWidgetTrackRequests").removeClass("active");
-	$(".RTWidgetTrackRequests2").removeClass("active");
-	
-});
-
-
-$(".Messages").on('click', function() {
-$(".Messages").toggleClass("active");
-});
-	
-}
-);
-</script>
-
-
- 
- <link rel="stylesheet" type="text/css" href="http://78.155.217.167:8080/media/static/css/request_track_widget/request_widget.css" />
-<script type="text/javascript" src="http://78.155.217.167:8080/media/static/js/request_track_widget/request_widget.js"></script>
-
  </body> 
 </html>
