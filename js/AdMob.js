@@ -88,7 +88,7 @@ if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
 
     $(document).on('backbutton', function(){
 
-      if(window.confirm('Радио остановится. Вы согласны закрыть приложение?')) navigator.app.exitApp();
+      if(window.confirm('Радио остановится. Закрыть приложение?')) navigator.app.exitApp();
 
     });
 
