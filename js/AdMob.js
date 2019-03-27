@@ -1,150 +1,94 @@
 
-var argscheck = require('cordova/argscheck'),
-    exec = require('cordova/exec');
+  var admobid = {};
 
-var admobExport = {};
+  if( /(android)/i.test(navigator.userAgent) ) {
 
-admobExport.AD_SIZE = {
-  SMART_BANNER: 'SMART_BANNER',
-  BANNER: 'BANNER',
-  MEDIUM_RECTANGLE: 'MEDIUM_RECTANGLE',
-  FULL_BANNER: 'FULL_BANNER',
-  LARGE_BANNER: 'LARGE_BANNER',
-  LEADERBOARD: 'LEADERBOARD',
-  SKYSCRAPER: 'SKYSCRAPER'
-};
+    admobid = { // for Android
 
-admobExport.AD_POSITION = {
-  NO_CHANGE: 0,
-  TOP_LEFT: 1,
-  TOP_CENTER: 2,
-  TOP_RIGHT: 3,
-  LEFT: 4,
-  CENTER: 5,
-  RIGHT: 6,
-  BOTTOM_LEFT: 7,
-  BOTTOM_CENTER: 8,
-  BOTTOM_RIGHT: 9,
-  POS_XY: 10
-};
+      banner: 'ca-app-pub-1179949820637196/2704368742',
 
-/*
-* see google doc: http://developer.android.com/google/play-services/id.html
-* see apple doc: https://developer.apple.com/library/ios/documentation/AdSupport/Reference/ASIdentifierManager_Ref/
-*
-* getAdSettings(function(data){
-*   data.adId;  // UUID string
-*   data.adTrackingEnabled; // boolean
-* }, function(){
-*   // fail to get user ad settings
-* });
-*/
-admobExport.getAdSettings = function(successCallback, failureCallback){
-  cordova.exec(successCallback, failureCallback, 'AdMob', 'getAdSettings', []);
-};
+      interstitial: 'ca-app-pub-1179949820637196/1310685587',
 
-/*
- * set options:
- *  {
- *    adSize: string, // banner type size
- *    width: integer, // banner width, if set adSize to 'CUSTOM'
- *    height: integer, // banner height, if set adSize to 'CUSTOM'
- *    position: integer, // default position
- *    x: integer, // default X of banner
- *    y: integer, // default Y of banner
- *    isTesting: boolean, // if set to true, to receive test ads
- *    autoShow: boolean, // if set to true, no need call showBanner or showInterstitial
- *    adExtra: {
- *    }
- *   }
- */
-admobExport.setOptions = function(options, successCallback, failureCallback) {
-  if(typeof options === 'object') {
-    cordova.exec( successCallback, failureCallback, 'AdMob', 'setOptions', [options] );
-  } else {
-    if(typeof failureCallback === 'function') {
-      failureCallback('options should be specified.');
-    }
+    };
+
   }
-};
 
-admobExport.createBanner = function(args, successCallback, failureCallback) {
-  var options = {};
-  if(typeof args === 'object') {
-    for(var k in args) {
-      if(k === 'success') { if(typeof args[k] === 'function') successCallback = args[k]; }
-      else if(k === 'error') { if(typeof args[k] === 'function') failureCallback = args[k]; }
-      else {
-        options[k] = args[k];
-      }
-    }
-  } else if(typeof args === 'string') {
-    options = { adId: args };
+	
+
+  function createSelectedBanner(){
+
+    if(AdMob) AdMob.createBanner({
+
+      adId: admobid.banner,
+
+      overlap: $('#overlap').is(':checked'),
+
+      offsetTopBar: $('#offsetTopBar').is(':checked'),
+
+      adSize: $('#adSize').val(),
+
+      position: $('#adPosition').val(),
+
+    });
+
   }
-  cordova.exec( successCallback, failureCallback, 'AdMob', 'createBanner', [ options ] );
-};
 
-admobExport.removeBanner = function(successCallback, failureCallback) {
-  cordova.exec( successCallback, failureCallback, 'AdMob', 'removeBanner', [] );
-};
 
-admobExport.hideBanner = function(successCallback, failureCallback) {
-  cordova.exec( successCallback, failureCallback, 'AdMob', 'hideBanner', [] );
-};
 
-admobExport.showBanner = function(position, successCallback, failureCallback) {
-  if(typeof position === 'undefined') position = 0;
-  cordova.exec( successCallback, failureCallback, 'AdMob', 'showBanner', [ position ] );
-};
+function initApp() {
 
-admobExport.showBannerAtXY = function(x, y, successCallback, failureCallback) {
-  if(typeof x === 'undefined') x = 0;
-  if(typeof y === 'undefined') y = 0;
-  cordova.exec( successCallback, failureCallback, 'AdMob', 'showBannerAtXY', [{x:x, y:y}] );
-};
+  if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
 
-admobExport.prepareInterstitial = function(args, successCallback, failureCallback) {
-  var options = {};
-  if(typeof args === 'object') {
-    for(var k in args) {
-      if(k === 'success') { if(typeof args[k] === 'function') successCallback = args[k]; }
-      else if(k === 'error') { if(typeof args[k] === 'function') failureCallback = args[k]; }
-      else {
-        options[k] = args[k];
-      }
-    }
-  } else if(typeof args === 'string') {
-    options = { adId: args };
-  }
-  cordova.exec( successCallback, failureCallback, 'AdMob', 'prepareInterstitial', [ options ] );
-};
 
-admobExport.showInterstitial = function(successCallback, failureCallback) {
-  cordova.exec( successCallback, failureCallback, 'AdMob', 'showInterstitial', [] );
-};
 
-admobExport.isInterstitialReady = function(successCallback, failureCallback) {
-  cordova.exec( successCallback, failureCallback, 'AdMob', 'isInterstitialReady', [] );
-};
+  // this will create a banner on startup
 
-admobExport.prepareRewardVideoAd = function(args, successCallback, failureCallback) {
-  var options = {};
-  if(typeof args === 'object') {
-    for(var k in args) {
-      if(k === 'success') { if(typeof args[k] === 'function') successCallback = args[k]; }
-      else if(k === 'error') { if(typeof args[k] === 'function') failureCallback = args[k]; }
-      else {
-        options[k] = args[k];
-      }
-    }
-  } else if(typeof args === 'string') {
-    options = { adId: args };
-  }
-  cordova.exec( successCallback, failureCallback, 'AdMob', 'prepareRewardVideoAd', [ options ] );
-};
+  AdMob.createBanner( {
 
-admobExport.showRewardVideoAd = function(successCallback, failureCallback) {
-  cordova.exec( successCallback, failureCallback, 'AdMob', 'showRewardVideoAd', [] );
-};
+    adId: admobid.banner,
 
-module.exports = admobExport;
+    position: AdMob.AD_POSITION.BOTTOM_CENTER,
+
+    overlap: false,
+
+    offsetTopBar: true,
+
+    bgColor: 'red'
+
+  } );
+
+
+
+  // this will load a full screen ad on startup
+
+  AdMob.prepareInterstitial({
+
+    adId: admobid.interstitial,
+
+    autoShow: true
+
+  });
+
+}
+
+
+
+if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
+
+    document.addEventListener('deviceready', initApp, false);
+
+} else {
+
+    initApp();
+
+}
+
+
+    // test case for #256, https://github.com/floatinghotpot/cordova-admob-pro/issues/256
+
+    $(document).on('backbutton', function(){
+
+      if(window.confirm('Радио остановится. Вы согласны закрыть приложение?')) navigator.app.exitApp();
+
+    });
+
