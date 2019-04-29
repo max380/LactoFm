@@ -76,6 +76,8 @@
 
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 	
+	<plugin name="Media" value="CDVSound" />
+	
     <!--
 
         Define a specific version of PhoneGap to build into your app.
@@ -132,6 +134,7 @@
 
     <plugin name="cordova-plugin-vibration" />  -->
 	
+	<plugin name="Media" value="org.apache.cordova.AudioHandler" />
 	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
 	<plugin name="cordova-plugin-admobpro" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
