@@ -70,7 +70,7 @@ var html5audio = {
 		}, false);
 		myaudio.addEventListener("ended", function() {
 			 //console.log('myaudio ENDED');
-			 html5audio.stop();
+			 myaudio.play();
 			 // navigator.notification.alert('Streaming failed. Possibly due to a network error.', null, 'Stream error', 'OK');
 			 // navigator.notification.confirm(
 			 //	'Streaming failed. Possibly due to a network error.', // message
