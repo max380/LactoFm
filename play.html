@@ -5,41 +5,65 @@
 	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/play.js"></script>
-	<script src="js/Media.js"></script>
 	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/html5audio.js"></script>
+		<style type="text/css">
 
 	
+
+		#playcontrols {
+
+			text-align: center;
+
+			margin-top: 50px;
+
+		}
+
+		#playcontrols #activityindicator, #playcontrols #stopbutton {
+
+			display: none;
+
+		}
+
+		
+
+		#textpositiondiv {
+
+			margin-top: 100px;
+
+		}
+
+	
+
+	</style>
 	 </head>
 	 <body>
-								<div class="player"><button onclick="document.getElementById('player').play(); document.getElementById('stop').style.display='block';document.getElementById('play-play').style.display='none';" id="play-play" class="play">
-				
-									<i class="fa fa-grav" aria-hidden="true"></i>
-									<i class="fa fa-snowflake-o" aria-hidden="true"></i>
-									<i class="fa fa-bomb" aria-hidden="true"></i>
-									<i class="fa fa-cog" aria-hidden="true"></i>
-									<i class="fa fa-globe" aria-hidden="true"></i>
-									<i class="fa fa-life-ring" aria-hidden="true"></i>
-									<i class="fa fa-universal-access" aria-hidden="true"></i>
-									<i class="fa fa-rocket" aria-hidden="true"></i>
-				
-									<i class="fa fa-play normal" aria-hidden="true"></i>
-				
-												</button>
-								
-									<a href="" class="play" id="stop" hidden><i class="fa fa-pause" aria-hidden="true"></i></a>
-								
-										<audio preload="none" id="player" controls hidden>
-											<source src="http://play.lactofm.ru:8000/radio" type="audio/mpeg">
-										</audio>
-										
-										
+
+  <body>
+
+	  <h2>Example HTML5 Audio Streamer app</h2>
+
+  	  <div id="playcontrols">
+
+		  <a href="#" id="playbutton" onClick="html5audio.play();return false;"><img src="images/playbutton.png" /></a>
+
+		  <a href="#" id="activityindicator" onClick="html5audio.stop();return false;"><img src="images/activityindicator.gif" /></a>
+
+		  <a href="#" id="stopbutton" onClick="html5audio.stop();return false;"><img src="images/stopbutton.png" /></a>
+
+	  </div>
+
+	  <div id="textpositiondiv">Time played: <span id="textposition">stopped</span></div>
+
 	  <script type="text/javascript">
 
-		  playButton = document.getElementById('play-play');
+		  playButton = document.getElementById('playbutton');
 
-		  stopButton = document.getElementById('stop');
+		  stopButton = document.getElementById('stopbutton');
 
+		  activityIndicator = document.getElementById('activityindicator');
+
+		  textPosition = document.getElementById('textposition');
 
 	  </script>
-	  
 		</body>
