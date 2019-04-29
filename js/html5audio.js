@@ -49,6 +49,7 @@ var html5audio = {
 			 }
 		}, false);
 		myaudio.addEventListener("error", function() {
+			 onConfirmRetry();
 			 console.log('myaudio ERROR');
 		}, false);
 		myaudio.addEventListener("canplay", function() {
@@ -73,13 +74,13 @@ var html5audio = {
 			 // navigator.notification.alert('Streaming failed. Possibly due to a network error.', null, 'Stream error', 'OK');
 			 // navigator.notification.confirm(
 			 //	'Streaming failed. Possibly due to a network error.', // message
-			 onConfirmRetry,	// callback to invoke with index of button pressed
+			 // onConfirmRetry,	// callback to invoke with index of button pressed
 			 //	'Stream error',	// title
 			 //	'Retry,OK'		// buttonLabels
 			 // );
-			 // if (window.confirm('Streaming failed. Possibly due to a network error. Retry?')) {
+			  if (window.confirm('Произошла непонятная ошибка. Переподключиться?')) {
 			 	onConfirmRetry();
-			 // }
+			  }
 		}, false);
 	},
 	pause: function() {
