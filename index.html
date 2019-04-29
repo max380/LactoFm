@@ -18,9 +18,8 @@
 	<script src="js/stat.js"></script>
 	<script src="js/AdMob.js"></script>
 	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/html5audio.js"></script>
 
-
-	<link href="http://78.155.217.167:8080/media/static/css/widget-status.css" rel="stylesheet">
 	
     
 	
@@ -52,7 +51,27 @@
 <!-- <script src="http://lactofm.ru/templates/protostar/js/host2.js"></script> -->
 </div>
 
-			<iframe class="frmae" src="play.html"></iframe>	
+			 <div id="playcontrols">
+
+		  <a href="#" id="playbutton" onClick="html5audio.play();return false;"><img src="images/playbutton.png" /></a>
+
+		  <a href="#" id="activityindicator" onClick="html5audio.stop();return false;"><img src="images/activityindicator.gif" /></a>
+
+		  <a href="#" id="stopbutton" onClick="html5audio.stop();return false;"><img src="images/stopbutton.png" /></a>
+
+	  </div>
+
+
+	  <script type="text/javascript">
+
+		  playButton = document.getElementById('playbutton');
+
+		  stopButton = document.getElementById('stopbutton');
+
+		  activityIndicator = document.getElementById('activityindicator');
+
+
+	  </script>
 			
 				
 		</div>

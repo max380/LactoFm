@@ -410,3 +410,12 @@ background: #D8E6F3;
 th:first-child, td:first-child {
 text-align: left;
 }
+
+#playcontrols {
+text-align: center;
+margin-top: 30px;
+}
+
+#playcontrols #activityindicator, #playcontrols #stopbutton {
+display: none;
+}
