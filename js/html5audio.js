@@ -14,7 +14,7 @@ function onError(error)
 
 function onConfirmRetry(button) {
 	if (button == 1) {
-		html5audio.play();
+		myaudio.play();
 	}
 }
 
@@ -49,7 +49,7 @@ var html5audio = {
 			 }
 		}, false);
 		myaudio.addEventListener("error", function() {
-			 onConfirmRetry();
+			 myaudio.play();
 			 console.log('myaudio ERROR');
 		}, false);
 		myaudio.addEventListener("canplay", function() {
@@ -70,7 +70,7 @@ var html5audio = {
 		}, false);
 		myaudio.addEventListener("ended", function() {
 			 //console.log('myaudio ENDED');
-			 myaudio.play();
+			 onConfirmRetry();
 			 // navigator.notification.alert('Streaming failed. Possibly due to a network error.', null, 'Stream error', 'OK');
 			 // navigator.notification.confirm(
 			 //	'Streaming failed. Possibly due to a network error.', // message
