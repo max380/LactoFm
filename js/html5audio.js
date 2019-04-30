@@ -76,7 +76,7 @@ var html5audio = {
 			 //	onConfirmRetry,	// callback to invoke with index of button pressed
 			 //	'Stream error',	// title
 			 //	'Retry,OK'		// buttonLabels
-			  );
+			 // );
 			 if (window.confirm('Streaming failed. Possibly due to a network error. Retry?')) {
 			 	onConfirmRetry();
 			 }
