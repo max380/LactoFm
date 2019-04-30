@@ -135,7 +135,7 @@
 	
 
 	<plugin name="cordova-plugin-background-audio" source="npm" />
-    <plugin name="cordova-plugin-splashscreen" />	
+
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
 	<preference name="BackupWebStorage" value="local" />
