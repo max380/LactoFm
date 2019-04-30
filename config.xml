@@ -133,7 +133,8 @@
 
     <plugin name="cordova-plugin-vibration" />  -->
 	
-
+	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
+	<plugin name="cordova-plugin-admobpro" source="npm" />
 	<plugin name="cordova-plugin-background-audio" source="npm" />
 
 
@@ -283,9 +284,6 @@
 
     </platform>
 
-<feature name="Media">
-    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
-	<param name="ios-package" value="CDVSound" />
-</feature>
+
 
 </widget>
