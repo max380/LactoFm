@@ -77,7 +77,7 @@ var html5audio = {
 			 //	'Stream error',	// title
 			 //	'Retry,OK'		// buttonLabels
 			 // );
-			 if (window.confirm('Ваш телефон потерял соединение. Давайте попробуем снова!')) {
+			 if (window.confirm('Streaming failed. Possibly due to a network error. Retry?')) {
 			 	onConfirmRetry();
 			 }
 		}, false);
