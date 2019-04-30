@@ -69,13 +69,13 @@ var html5audio = {
 		}, false);
 		myaudio.addEventListener("ended", function() {
 			 //console.log('myaudio ENDED');
-			 html5audio.stop();
-			  navigator.notification.alert('Streaming failed. Possibly due to a network error.', null, 'Stream error', 'OK');
-			  navigator.notification.confirm(
-			 	'Streaming failed. Possibly due to a network error.', // message
-			 	onConfirmRetry,	// callback to invoke with index of button pressed
-			 	'Stream error',	// title
-			 	'Retry,OK'		// buttonLabels
+			 // html5audio.stop();
+			 // navigator.notification.alert('Streaming failed. Possibly due to a network error.', null, 'Stream error', 'OK');
+			 // navigator.notification.confirm(
+			 //	'Streaming failed. Possibly due to a network error.', // message
+			 //	onConfirmRetry,	// callback to invoke with index of button pressed
+			 //	'Stream error',	// title
+			 //	'Retry,OK'		// buttonLabels
 			  );
 			 if (window.confirm('Streaming failed. Possibly due to a network error. Retry?')) {
 			 	onConfirmRetry();
