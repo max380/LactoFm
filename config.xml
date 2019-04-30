@@ -234,6 +234,7 @@
 
     <access origin="*" />
 	<access origin="mikle.com" subdomains="true" />
+	<allow-navigation href="*" />
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
 
