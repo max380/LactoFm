@@ -10,7 +10,7 @@
 
         id        = "com.lactofm"
 
-        version   = "2.8">
+        version   = "2.9">
 
 
 
@@ -133,12 +133,13 @@
 
     <plugin name="cordova-plugin-vibration" />  -->
 	
-
+	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
+	<plugin name="cordova-plugin-admobpro" source="npm" />
 	<plugin name="cordova-plugin-background-audio" source="npm" />
-
+    <plugin name="cordova-plugin-splashscreen" />	
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
-	<preference name="BackupWebStorage" value="local" />
+	<!-- <preference name="BackupWebStorage" value="local" /> -->
 	<preference name="android-build-tool" value="gradle" /> 
 	<preference name="SplashScreenDelay" value="7000" />
 
@@ -233,8 +234,6 @@
 
 
     <access origin="*" />
-	<access origin="mikle.com" subdomains="true" />
-	<allow-navigation href="*" />
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
 
@@ -285,6 +284,9 @@
 
     </platform>
 
-
+<feature name="Media">
+    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+	<param name="ios-package" value="CDVSound" />
+</feature>
 
 </widget>
