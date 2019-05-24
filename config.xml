@@ -8,9 +8,9 @@
 
         xmlns:gap = "http://phonegap.com/ns/1.0"
 
-        id        = "com.lactofm"
+        id        = "com.lactofm1"
 
-        version   = "2.9">
+        version   = "3.0">
 
 
 
@@ -284,9 +284,5 @@
 
     </platform>
 
-<feature name="Media">
-    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
-	<param name="ios-package" value="CDVSound" />
-</feature>
 
 </widget>
