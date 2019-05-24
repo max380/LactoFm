@@ -9,7 +9,7 @@ var textPosition;
 
 function onError(error) 
 {
-	console.log(error.message);
+	// console.log(error.message);
 }
 
 function onConfirmRetry(button) {
@@ -49,10 +49,10 @@ var html5audio = {
 			 }
 		}, false);
 		myaudio.addEventListener("error", function() {
-			 console.log('myaudio ERROR');
+			 // console.log('myaudio ERROR');
 		}, false);
 		myaudio.addEventListener("canplay", function() {
-			 console.log('myaudio CAN PLAY');
+			 // console.log('myaudio CAN PLAY');
 		}, false);
 		myaudio.addEventListener("waiting", function() {
 			 //console.log('myaudio WAITING');
