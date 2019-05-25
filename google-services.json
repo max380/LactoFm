@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "667249969471",
+    "firebase_url": "https://lactofm.firebaseio.com",
+    "project_id": "lactofm",
+    "storage_bucket": "lactofm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667249969471:android:3aa20c35a65d2061",
+        "android_client_info": {
+          "package_name": "com.lactofm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667249969471-re0cu00qhmve89bl496o7ustii7jfi54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8QEyyeuYOJYxeyVdVcljbvI63SdiAVEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667249969471-re0cu00qhmve89bl496o7ustii7jfi54.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1179949820637196~4703135689"
+    }
+  ],
+  "configuration_version": "1"
+}
