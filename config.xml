@@ -260,7 +260,7 @@
 
         <allow-intent href="market:*" />
 		
-		<resource-file src="google-services.json" target="src/android/google-services.json" />
+		<resource-file src="google-services.json" target="app/google-services.json" />
 
 		<resource-file src="/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" />
 		
