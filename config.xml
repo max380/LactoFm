@@ -282,6 +282,7 @@
     </platform>
 
     <platform name="ios">
+		<resource-file src="GoogleService-Info.plist" />
 
         <allow-intent href="itms:*" />
 
