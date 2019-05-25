@@ -136,6 +136,7 @@
 	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
 	<plugin name="cordova-plugin-firebase" spec="2.0.5" />
 	<plugin name="cordova-plugin-admobpro" source="npm" />
+	<plugin name="cordova-android-play-services-gradle-release" source="npm" />
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" source="npm" />	
 
