@@ -131,10 +131,11 @@
 
     <plugin name="cordova-plugin-network-information" /> 
 
-    <plugin name="cordova-plugin-vibration" />  -->
+    <plugin name="cordova-plugin-vibration" />  -->  
 	
 	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
 	<plugin name="cordova-plugin-firebase" spec="^2.0.0" />
+	<plugin name="cordova-support-google-services" spec="^3.0.0" />
 	<plugin name="cordova-plugin-admobpro" source="npm" />
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
