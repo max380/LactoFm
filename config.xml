@@ -10,7 +10,7 @@
 
         id        = "com.lactofm"
 
-        version   = "3.0">
+        version   = "3.1">
 
 
 
@@ -134,6 +134,7 @@
     <plugin name="cordova-plugin-vibration" />  -->
 	
 	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
+	<plugin name="cordova-plugin-firebase" spec="^2.0.0" />
 	<plugin name="cordova-plugin-admobpro" source="npm" />
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
