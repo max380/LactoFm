@@ -134,9 +134,9 @@
     <plugin name="cordova-plugin-vibration" />  -->  
 	
 	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
-	<plugin name="cordova-plugin-firebase" spec="2.0.5" />
+
 	<plugin name="cordova-plugin-admobpro" source="npm" />
-	<plugin name="cordova-support-google-services" source="npm" />
+
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" source="npm" />	
 
@@ -259,8 +259,6 @@
 	
 
         <allow-intent href="market:*" />
-		
-		<resource-file src="google-services.json" target="app/google-services.json" />
 
 		<resource-file src="/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" />
 		
@@ -282,7 +280,6 @@
     </platform>
 
     <platform name="ios">
-		<resource-file src="GoogleService-Info.plist" />
 
         <allow-intent href="itms:*" />
 
