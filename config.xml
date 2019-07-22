@@ -141,8 +141,7 @@
     <plugin name="cordova-plugin-splashscreen" source="npm" />	
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
-	<!-- <preference name="BackupWebStorage" value="local" /> -->
-	<preference name="android-build-tool" value="gradle" /> 
+	<preference name="BackupWebStorage" value="local" />
 	<preference name="SplashScreenDelay" value="7000" />
 
 
@@ -257,7 +256,6 @@
 
     <platform name="android">
 	
-
         <allow-intent href="market:*" />
 
 		<resource-file src="/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" />
