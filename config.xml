@@ -136,11 +136,6 @@
 	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
 
 	<plugin name="cordova-plugin-admobpro" source="npm" />
-<<<<<<< HEAD
-
-=======
-	<plugin name="com.google.gms:google-services" source="npm" />
->>>>>>> parent of 733d6a5... ver 3.1
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" source="npm" />	
 
