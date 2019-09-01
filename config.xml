@@ -259,6 +259,7 @@
         <allow-intent href="market:*" />
 
 		<preference name="APP_SECRET" value="c947cdba-c1d3-4eeb-bad3-2ab07923b897" />
+		<preference name="APPCENTER_ANALYTICS_ENABLE_IN_JS" value="true" />
 
 		<resource-file src="/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" />
 		
