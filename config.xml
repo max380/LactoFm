@@ -85,7 +85,7 @@
 
     -->
 
-<preference name='phonegap-version' value='cli-8.0.0' />
+<preference name='phonegap-version' value='cli-9.0.0' />
 
     <!-- Plugins 
 	
@@ -137,6 +137,8 @@
 	<plugin name="cordova-plugin-admobpro" source="npm" />
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
+	<plugin name="cordova-plugin-appcenter-analytics" />
+	<plugin name="cordova-plugin-appcenter-crashes" />
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
 	<preference name="BackupWebStorage" value="local" />
@@ -255,6 +257,8 @@
     <platform name="android">
 
         <allow-intent href="market:*" />
+
+		<preference name="APP_SECRET" value="c947cdba-c1d3-4eeb-bad3-2ab07923b897" />
 
 		<resource-file src="/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" />
 		
