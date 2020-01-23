@@ -10,7 +10,7 @@
 
         id        = "com.lactofm"
 
-        version   = "3.2">
+        version   = "3.3">
 
 
 
@@ -133,12 +133,13 @@
 
     <plugin name="cordova-plugin-vibration" />  -->
 	
-	<plugin name="onesignal-cordova-plugin" spec="2.4.1" source="npm" />
+	<plugin name="onesignal-cordova-plugin" source="npm" />
 	<plugin name="cordova-plugin-admobpro" source="npm" />
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
 	<plugin name="cordova-plugin-appcenter-analytics" />
 	<plugin name="cordova-plugin-appcenter-crashes" />
+	<plugin name="com.smartmobilesoftware.inappbilling" source="pgb" />
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
 	<preference name="BackupWebStorage" value="local" />
