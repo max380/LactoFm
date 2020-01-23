@@ -5,7 +5,7 @@
                  // Дополнительно передается два параметра
                  // callback & format для получения данных
                  // в формате JSONP. Это позволит преодолеть CORS ограничение
-                 url: "http://78.155.217.167:8080/api/history/?server=1&limit=11&callback=callback&format=jsonp",
+                 url: "http://89.163.144.28:8080/api/history/?server=1&limit=11&callback=callback&format=jsonp",
                  jsonp: "callback",
                  dataType: "jsonp",
                  method: "GET",
@@ -48,7 +48,7 @@
                  // Дополнительно передается два параметра
                  // callback & format для получения данных
                  // в формате JSONP. Это позволит преодолеть CORS ограничение
-                 url: "http://78.155.217.167:8080/api/channels/?server=1&callback=callback&format=jsonp",
+                 url: "http://89.163.144.28:8080/api/channels/?server=1&callback=callback&format=jsonp",
                  jsonp: "callback",
                  dataType: "jsonp",
                  method: "GET",
