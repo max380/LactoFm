@@ -133,13 +133,13 @@
 
     <plugin name="cordova-plugin-vibration" />  -->
 	
-	<plugin name="onesignal-cordova-plugin" source="npm" />
+	<plugin name="onesignal-cordova-plugin" />
 	<plugin name="cordova-plugin-admobpro" source="npm" />
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
 	<plugin name="cordova-plugin-appcenter-analytics" />
 	<plugin name="cordova-plugin-appcenter-crashes" />
-	<plugin name="com.smartmobilesoftware.inappbilling" source="pgb" />
+	<plugin name="in-app-purchase" />
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
 	<preference name="BackupWebStorage" value="local" />
