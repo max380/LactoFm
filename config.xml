@@ -134,7 +134,7 @@
     <plugin name="cordova-plugin-vibration" />  -->
 	
 	<plugin name="onesignal-cordova-plugin" source="npm" />
-	<plugin name="cordova-plugin-admobpro" source="npm" />
+	<!-- <plugin name="cordova-plugin-admobpro" source="npm" /> -->
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
 	<plugin name="cordova-plugin-appcenter-analytics" />
@@ -148,7 +148,7 @@
 
 	
 <!-- Windows 10 (default): -->
-<preference name="CN=34C94B7A-C3C9-4431-83A9-58AEC17AC5B3" value="uap" />
+
 
 
 
@@ -258,9 +258,6 @@
     <platform name="android">
 
         <allow-intent href="market:*" />
-
-		<preference name="APP_SECRET" value="c947cdba-c1d3-4eeb-bad3-2ab07923b897" />
-		<preference name="APPCENTER_ANALYTICS_ENABLE_IN_JS" value="true" />
 
 		<resource-file src="/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" />
 		
