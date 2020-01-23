@@ -139,7 +139,7 @@
     <plugin name="cordova-plugin-splashscreen" />	
 	<plugin name="cordova-plugin-appcenter-analytics" />
 	<plugin name="cordova-plugin-appcenter-crashes" />
-	<plugin name="in-app-purchase" />
+
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
 	<preference name="BackupWebStorage" value="local" />
