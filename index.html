@@ -16,7 +16,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/menu.js"></script>
 	<script src="js/stat.js"></script>
-	<script src="js/AdMob.js"></script>
+	<!-- <script src="js/AdMob.js"></script> -->
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/html5audio.js"></script>
 
@@ -46,7 +46,7 @@
 							<div class="cd"><img src="img/cd.png"></img></div>
 				
 							<div class="music-name"><div class="sc-status-widget">
-<center><span id="track"></span></center>
+<center><span id="author"></span>-<span id="title"></span></center>
 </div>
 <!-- <script src="http://lactofm.ru/templates/protostar/js/host2.js"></script> -->
 </div>
@@ -91,43 +91,43 @@
 <table>
 <tr>
         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">1</td>
-        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track1" style="display: inline-block;vertical-align: middle;">Нет интернета!</span></td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="author1" style="display: inline-block;vertical-align: middle;">Нет интернета!</span> - <span id="title1" style="display: inline-block;vertical-align: middle;"></span></td>
     </tr>
     <tr>
         <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">2</td>
-        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track2" style="display: inline-block;vertical-align: middle;"></span></td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="author2" style="display: inline-block;vertical-align: middle;"></span> - <span id="title2" style="display: inline-block;vertical-align: middle;"></span></td>
     </tr>
     <tr>
          <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">3</td>
-        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track3" style="display: inline-block;vertical-align: middle;"></span></td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="author3" style="display: inline-block;vertical-align: middle;"></span> - <span id="title3" style="display: inline-block;vertical-align: middle;"></span></td>
     </tr>
     <tr>
         <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">4</td>
-        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track4" style="display: inline-block;vertical-align: middle;"></span></td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="author4" style="display: inline-block;vertical-align: middle;"></span> - <span id="title4" style="display: inline-block;vertical-align: middle;"></span></td>
     </tr>
     <tr>
          <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">5</td>
-        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track5" style="display: inline-block;vertical-align: middle;"></td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="author5" style="display: inline-block;vertical-align: middle;"></span> - <span id="title5" style="display: inline-block;vertical-align: middle;"></span></td>
     </tr>
     <tr>
         <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">6</td>
-        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track6" style="display: inline-block;vertical-align: middle;"></span></td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="author6" style="display: inline-block;vertical-align: middle;"></span> - <span id="title6" style="display: inline-block;vertical-align: middle;"></span></td>
     </tr>
     <tr>
          <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">7</td>
-        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track7" style="display: inline-block;vertical-align: middle;""></td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="author7" style="display: inline-block;vertical-align: middle;"></span> - <span id="title7" style="display: inline-block;vertical-align: middle;"></span></td>
     </tr>
     <tr>
         <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">8</td>
-        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track8" style="display: inline-block;vertical-align: middle;"></span></td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="author8" style="display: inline-block;vertical-align: middle;"></span> - <span id="title8" style="display: inline-block;vertical-align: middle;"></span></td>
     </tr>
     <tr>
          <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">9</td>
-        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track9" style="display: inline-block;vertical-align: middle;""></td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="author9" style="display: inline-block;vertical-align: middle;"></span> - <span id="title9" style="display: inline-block;vertical-align: middle;"></span></td>
     </tr>
     <tr>
         <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">10</td>
-        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track10" style="display: inline-block;vertical-align: middle;"></span></td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="author10" style="display: inline-block;vertical-align: middle;"></span> - <span id="title10" style="display: inline-block;vertical-align: middle;"></span></td>
     </tr>
 </table>
 </center>
