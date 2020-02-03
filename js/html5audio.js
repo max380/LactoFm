@@ -9,7 +9,7 @@ var textPosition;
 
 function onError(error) 
 {
-	// console.log(error.message);
+	console.log(error.message);
 }
 
 function onConfirmRetry(button) {
@@ -39,15 +39,7 @@ var html5audio = {
 				 activityIndicator.style.display = 'block';
 				 textPosition.innerHTML = 'loading...';
 			 }
-		},1000);
-		myaudio.addEventListener("timeupdate", function() {
-			 var s = parseInt(myaudio.currentTime % 60);
-			 var m = parseInt((myaudio.currentTime / 60) % 60);
-			 var h = parseInt(((myaudio.currentTime / 60) / 60) % 60);
-			 if (isPlaying && myaudio.currentTime > 0) {
-				 textPosition.innerHTML = pad2(h) + ':' + pad2(m) + ':' + pad2(s);
-			 }
-		}, false);
+		},10000);
 		myaudio.addEventListener("error", function() {
 			 // console.log('myaudio ERROR');
 		}, false);
@@ -93,7 +85,7 @@ var html5audio = {
 	stop: function() {
 		isPlaying = false;
 		clearInterval(readyStateInterval);
-		myaudio.pause();
+		myaudio.currentTime = "0"
 		stopButton.style.display = 'none';
 		activityIndicator.style.display = 'none';
 		playButton.style.display = 'block';

@@ -10,7 +10,7 @@
 
         id        = "com.lactofm"
 
-        version   = "3.3">
+        version   = "3.4">
 
 
 
@@ -134,7 +134,9 @@
     <plugin name="cordova-plugin-vibration" />  -->
 	
 	<plugin name="onesignal-cordova-plugin" source="npm" />
-	<!-- <plugin name="cordova-plugin-admobpro" source="npm" /> -->
+	<plugin name="cordova-plugin-admobpro" source="npm" >
+	 <variable name="ADMOB_APP_ID" value="ca-app-pub-1179949820637196~4703135689" />
+    </plugin>
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
 	<plugin name="cordova-plugin-appcenter-analytics" />
