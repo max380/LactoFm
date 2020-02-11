@@ -10,7 +10,7 @@
 
         id        = "com.lactofm"
 
-        version   = "3.5">
+        version   = "3.6">
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-    <author href="http://lactofm.ru" email="admin@crage.ru">
+    <author href="http://lactosefm.ru" email="admin@crage.ru">
 
         Max380Ink 
 
@@ -134,13 +134,13 @@
     <plugin name="cordova-plugin-vibration" />  -->
 	
 	<plugin name="onesignal-cordova-plugin" source="npm" />
-	<plugin name="cordova-plugin-admobpro" source="npm" >
-	 <variable name="ADMOB_APP_ID" value="ca-app-pub-1179949820637196~4703135689" />
-    </plugin>
+	<!-- <plugin name="cordova-plugin-admobpro" source="npm" > -->
+	 <!-- <variable name="ADMOB_APP_ID" value="ca-app-pub-1179949820637196~4703135689" /> -->
+    <!-- </plugin> -->
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
-	<plugin name="cordova-plugin-appcenter-analytics" />
-	<plugin name="cordova-plugin-appcenter-crashes" />
+	<!-- <plugin name="cordova-plugin-appcenter-analytics" /> -->
+	<!-- <plugin name="cordova-plugin-appcenter-crashes" /> -->
 
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />

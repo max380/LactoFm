@@ -28,7 +28,7 @@ var html5audio = {
 	play: function()
 	{
 		isPlaying = true;
-		myaudioURL = 'http://play.lactosefm.ru:8110/stream';
+		myaudioURL = 'http://lactosefm.ru:8000/stream';
 		myaudio = new Audio(myaudioURL);
 		myaudio.play();
 		
