@@ -10,7 +10,7 @@
 
         id        = "com.lactofm"
 
-        version   = "3.6">
+        version   = "3.7">
 
 
 
@@ -144,7 +144,7 @@
 
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
-	<preference name="BackupWebStorage" value="local" />
+	<!-- <preference name="BackupWebStorage" value="local" /> -->
 	<preference name="SplashScreenDelay" value="7000" />
 
 
