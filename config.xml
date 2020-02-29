@@ -7,6 +7,11 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
 
         xmlns:gap = "http://phonegap.com/ns/1.0"
+		
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		
+		xmlns:cdv="http://cordova.apache.org/ns/1.0"
+
 
         id        = "com.lactofm"
 
@@ -144,9 +149,11 @@
 
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
-	<!-- <preference name="BackupWebStorage" value="local" /> -->
+	<preference name="BackupWebStorage" value="local" /> -->
 	<preference name="SplashScreenDelay" value="7000" />
-
+	<preference name="FadeSplashScreen"           value="1000"/>
+	<preference name="ShowSplashScreenSpinner"    value="true" />
+	<preference name="SplashShowOnlyFirstTime" 	value="true" />
 
 	
 <!-- Windows 10 (default): -->
@@ -203,11 +210,7 @@
 
 
 
-    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
 
-    <string>100</string>
-
-    </gap:config-file>
 
 
 
@@ -243,7 +246,7 @@
 
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
 
-    <plugin name="cordova-plugin-whitelist" version="1.3.2" />
+    <plugin name="cordova-plugin-whitelist" />
 
     <allow-intent href="http://*/*" />
 
@@ -260,6 +263,10 @@
     <platform name="android">
 
         <allow-intent href="market:*" />
+
+  <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+      <application android:usesCleartextTraffic="true" />
+  </edit-config>
 
 		<resource-file src="/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" />
 		
