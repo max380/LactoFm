@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Lactofm</title>
+   <meta charset="utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/stat.js"></script>
+	<!-- <script src="js/AdMob.js"></script> -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/html5audio.js"></script>
+
+	
+    
+	
+ </head>
+ <body>
+ 
+ <div class="body">
+
+	<div class="content">
+		<div  id="news" class="page">
+			
+			<!-- <iframe class="frmae" src="http://lactofm.ru/index.php/mobile"></iframe> -->
+<!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="102151/"></script> <!-- end feedwind code --> 
+		<br>
+			<br>
+
+		</div>
+		
+		
+		
+		<div  id="home" class="page active"> 
+				 <video id='video' loop poster="img/bg.jpg">
+
+      <source id='mp4'
+        src="img/fon.mp4"
+        type='video/mp4'>
+   
+
+    </video>
+	<i class="fa fa-headphones" aria-hidden="true"><span id="listeners"></span></i>
+							<div class="cd"><img src="img/cd.gif"></img></div>
+				
+							<div class="music-name"><div id="ecvo" class="ecvo1">
+<div class="sc-status-widget">
+<center><span id="track"></span></center></div>
+</div>
+<!-- <script src="http://lactofm.ru/templates/protostar/js/host2.js"></script> -->
+</div>
+
+			 <div id="playcontrols">
+
+		  <a href="#" id="playbutton" onClick="html5audio.play();"><img src="images/playbutton.png" /></a>
+
+		  <a href="#" id="activityindicator" onClick="html5audio.stop();return false;"><img src="images/activityindicator.gif" /></a>
+
+		  <a href="#" id="stopbutton" onClick="html5audio.stop();return false;"><img src="images/stopbutton.png" /></a>
+
+	  </div>
+
+
+	  <script type="text/javascript">
+
+		  playButton = document.getElementById('playbutton');
+
+		  stopButton = document.getElementById('stopbutton');
+
+		  activityIndicator = document.getElementById('activityindicator');
+
+
+	  </script>
+			
+				
+		</div>
+		
+		
+		
+		<div  id="line" class="page">
+	<div class="soc">
+				<center><a href="http://vk.com/lactofm"><img src="img/vk.png" width="90%" height="90%"></a></center>	
+			</div>
+		<a id="order" href="#">Заказать трек</a> 
+			
+
+			
+	<center>	
+	<div style="font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, Sans-Serif;font-size: 20px;"> Ранее в эфире: </div>
+<div class="cctrack" style="overflow: hidden;border-radius: 20px;">	
+	
+<table>
+<tr>
+        <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">1</td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track1" style="display: inline-block;vertical-align: middle;">Нет интернета!</span> </td>
+    </tr>
+    <tr>
+        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">2</td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track2" style="display: inline-block;vertical-align: middle;"></span> </td>
+    </tr>
+    <tr>
+         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">3</td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track3" style="display: inline-block;vertical-align: middle;"></span> </td>
+    </tr>
+    <tr>
+        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">4</td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track4" style="display: inline-block;vertical-align: middle;"></span> </td>
+    </tr>
+    <tr>
+         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">5</td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track5" style="display: inline-block;vertical-align: middle;"></span> </td>
+    </tr>
+    <tr>
+        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">6</td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track6" style="display: inline-block;vertical-align: middle;"></span> </td>
+    </tr>
+    <tr>
+         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">7</td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track7" style="display: inline-block;vertical-align: middle;"></span> </td>
+    </tr>
+    <tr>
+        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">8</td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track8" style="display: inline-block;vertical-align: middle;"></span> </td>
+    </tr>
+    <tr>
+         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">9</td>
+        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track9" style="display: inline-block;vertical-align: middle;"></span> </td>
+    </tr>
+    <tr>
+        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">10</td>
+        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track10" style="display: inline-block;vertical-align: middle;"></span> </td>
+    </tr>
+</table>
+</center>
+<br>
+<br>
+<br>
+
+			</div>
+	
+	
+		</div>
+		
+	</div>
+ 
+ </div>
+ <nav class="menu">
+	<!-- <button id="news" class="m-btn"><i class="fa fa-list-ul" aria-hidden="true"></i></button> -->
+	<button id="home" class="m-btn active"><i class="fa fa-play" aria-hidden="true"></i></button>
+	<button id="line" class="m-btn"><i class="fa fa-podcast" aria-hidden="true"></i>  </button>
+ </nav>
+ 
+ 
+ 
+ <div id="RTWidgetTrackRequests" class="RTWidgetTrackRequests">
+
+
+
+
+
+
+<div class="sc-track-request-widget">
+<div is="track-request-widget" 
+lang="ru" 
+api-base="http://80.93.177.71:8080/api/v2" 
+server-id="1" 
+ip-timeout="1700000"
+track-timeout="3500000"
+bgcolor="#ffffff"
+bgopacity="0"
+tracks_num="5"
+track_width="180"
+track_image_default="http://80.93.177.71:8080/media/tracks/default_track_img.png"
+meta_font_size="14"
+meta_font_style="normal"
+meta_font_color="#8000ff"
+meta_opacity="1"
+button_color="#ffffff"
+button_color_active="#b79ce2"
+button_font_color="#8000ff"
+button_font_size="14"
+ordering="1"
+allow_person_and_message="true"
+modal_background_color="#ffffff"
+modal_font_color="#8000ff"
+modal_background_opacity="1"
+>
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+var overlay = document.getElementById('ecvo');
+var video = document.getElementById('video');
+
+
+
+function test1() { 
+		video.play();
+        overlay.className = "ecvo2";
+    }
+
+
+function test2() { 
+		video.pause();
+        overlay.className = "ecvo1";
+    }
+	
+
+
+</script>	
+
+
+</div>
+<div class="RTWidgetTrackRequests2"><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+ 
+ 
+ 
+ <script>
+$(document).ready(
+function(){
+	
+$("#order").on('click', function() {
+	
+	$(".RTWidgetTrackRequests").addClass("active");
+	$(".RTWidgetTrackRequests2").addClass("active");
+	
+});
+
+$(".RTWidgetTrackRequests2").on('click', function() {
+	$(".RTWidgetTrackRequests").removeClass("active");
+	$(".RTWidgetTrackRequests2").removeClass("active");
+	
+});
+
+
+$(".Messages").on('click', function() {
+$(".Messages").toggleClass("active");
+});
+	
+}
+);
+</script>
+
+
+ 
+ <link rel="stylesheet" type="text/css" href="css/request_widget.css" />
+<script type="text/javascript" src="js/request_widget.js"></script>
+
+ </body> 
+</html>
