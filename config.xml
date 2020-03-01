@@ -240,7 +240,7 @@
 
 
 
-    <access origin="*1" />
+    <access origin="*" />
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
 
