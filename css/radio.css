@@ -1,0 +1,579 @@
+html {
+    background: #080808;
+    color: #f1f1f1;
+}
+.WrapMenu {
+  width: 29%; 
+  height: 100vh;
+  text-align: center;
+  float: left;
+  position: relative;
+  display: inline-block;
+  display: flex;
+}
+.preWrapMenu{
+    padding: 12px;
+    margin: auto;
+    width: 76%;
+}
+.WrapMenu img{
+  width: 76%;
+}
+.progress{
+    height: 2px;
+    background: rgb(255 255 255 / 11%);
+    width: 76%;
+    margin: 10px auto;
+}
+.pre_progress {
+    height: 2px;
+    background: #908d8d;
+}
+.WrapChat{
+  display: inline-block;
+  width: 70%; 
+  height: 100vh;
+}
+.shadow {
+    box-shadow: 0 0 13px 0px #777;
+    border-radius: 6px;
+}
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+.order{
+    background: none;
+    border: 1px solid rgb(221 221 221 / 62%);
+    color: #ddd;
+    font-size: 14px;
+    width: 100%;
+    padding: 6px 0;
+    cursor: pointer;
+}
+.pre_order {
+    width: 76%;
+    margin: 16px auto 0;
+}
+.NameDidj {
+    color: rgb(255 255 255 / 67%);
+}
+.NameDidj:hover {
+    color: rgb(255 255 255 / 67%);
+}
+.pretitle{
+    font-size: 14px;
+    margin-bottom: 17px;
+    max-height: 33px;
+}
+.ButtonPlay, .ButtonPause{
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    width: 49px;
+    height: 49px;
+    cursor:pointer;
+}
+.ButtonPlay:focus, .ButtonPause:focus {
+    outline:none;
+}
+.Clime {
+ transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+.Clime::before {
+ content: '';
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ opacity: 0;
+ transition: all .3s ease-in-out 0s;
+}
+.Clime::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid rgb(3 125 59);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+.ClimeMini {
+ transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+.ClimeMini::before {
+content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+.ClimeMini::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid rgb(195 195 195);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: Clime 1.5s infinite;
+}
+@keyframes Clime {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+  }
+}
+.header {
+    height: 57px;
+    margin-top: 15px;
+    border-radius: 6px 6px 0 0;
+    font-weight: 600;
+    color: #f3f3f3;
+    padding: 0 10px 0px 5px;
+    background: rgb(0 0 0 / 67%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(27 27 27 / 46%) 100%);
+    border-bottom: 1px solid #350f0f;
+    white-space: nowrap;
+}
+.button_top {
+    font-weight: 600;
+    color: #ddd;
+    background: rgb(18 18 18 / 86%);
+    border: none;
+    height: 56px;
+    text-align: left;
+    float: left;
+    width: 140px;
+    padding: 0 12px;
+    border-right: 1px solid #2b1414;
+    font-size: 15px;
+    background: rgb(0 0 0 / 67%);
+    background: linear-gradient(0deg, rgb(12 2 2) 0%, rgb(27 27 27 / 46%) 100%);
+    white-space: nowrap;
+}
+.button_top:hover {
+    cursor: pointer;
+    background: rgb(0 0 0 / 67%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 84%, rgb(27 27 27 / 46%) 100%);
+}
+.button_top div {
+    display: inline-block;
+}
+.button_top:focus{
+    outline: none;
+}
+.rtop {
+    padding-top: 3px;
+}
+.mtop {
+    display: inline-block;
+    float: left;
+    margin: 10px 10px 10px 0;
+    font-size: 16px;
+    color: #8e4141;
+}
+.header img{
+    width: 51px;
+    float: left;
+    transform: rotate(5deg);
+    margin-top: 8px;
+}
+.blink {
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  animation-duration: 2s;
+  -webkit-animation-name: blink;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration: 2s;
+  background: #fe0303;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  background: radial-gradient(circle, rgb(255 0 0) 0%, rgb(248 208 208 / 0) 100%);
+  vertical-align: middle;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.user{
+    background: #000;
+    color: #383838;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #252525;
+}
+.online{
+    font-size: 13px;
+    font-weight: 300;
+}
+.ChatTop{
+    display: inline-block;
+    position: relative;
+}
+
+.message {
+    border-radius: 4px;
+    padding: 7px 7px 1px;
+    cursor: pointer;
+    margin: 0;
+}
+.linkImg {
+   display: block;
+   float: left;
+   position:relative; 
+}
+.linkImg img {
+    object-fit:cover;
+    border-radius: 7px;
+    vertical-align: top;
+}
+.messageBlock {
+    margin-left: 50px;
+    word-wrap: break-word;
+    min-height: 40px;
+}
+.messageLink{
+    font-size: 14px;
+    display: block;
+    margin-bottom: 6px;
+}
+.messageLink a{
+    vertical-align: top;
+    color: #286b46;
+    text-decoration: none;
+}
+.messageLink a:hover {
+    color: #1d9051;
+    text-decoration: none;
+    cursor: pointer;
+}
+.messageLink span{
+    font-size: 10px;
+    color: #5f5f5f;
+}
+.reply {
+    padding: 4px 10px 10px;
+    border-radius: 6px;
+}
+.Wrap {
+    height: 356px;
+    background: rgb(6 6 6 / 79%);
+    overflow: hidden;
+    border-radius: 0 0 6px 6px;
+}
+.scroll {
+    overflow-y: scroll;
+}
+.send{
+    border: none;
+    width: 66px;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: #0a4824;
+    color: #02ff00;
+    font-weight: 600;
+    margin-top: 17px;
+}
+.send:hover {
+    background-color: #10773a;
+    cursor: pointer;
+}
+.send:focus {
+    background-color: #10773a;
+    outline: none;
+}
+.textarea {
+    resize: none;
+    height: 34px;
+    width: 95%;
+    background: rgb(6 6 6 / 92%);
+    outline: none;
+    padding: 12px;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    border: 1px solid #191919;
+    border-radius: 4px;
+}
+.NewMessages {
+    background: rgb(0 0 0 / 73%);
+    padding: 7px 0 3px 6px;
+    height: 61px;
+}
+.NewMessages div {
+ display: inline-block;
+}
+.Mes1 {
+    width: 80%;
+    float: left;
+}
+.Mes2 {
+    width: 19%;
+    text-align: center;
+}
+*:hover{
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+}
+*::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgb(39 39 39);
+}
+.a0 {
+    display: none;
+}
+.a1 {
+    display: inline-block;
+}
+.a2 {
+    display: inline-block;
+}
+.a3 {
+    display: inline-block;
+}
+.a4 {
+    display: inline-block;
+}
+.global_menu {
+    display: none;
+    white-space: nowrap;
+    background: rgb(0 0 0 / 44%);
+    padding: 10px;
+    position: fixed;
+    width: 96vw;
+    bottom: 0;
+}
+.global_button {
+    display: inline-block;
+    width: 50%;
+    background: rgb(0 0 0 / 57%);
+    color: #fff;
+    font-size: 17px;
+    padding: 10px;
+    border: 1px solid #272727;
+    margin: 0;
+    cursor:pointer;
+}
+.global_button:hover {
+  background:  rgb(0 0 0 / 98%);
+}
+.global_button:focus {
+ outline: none;
+}
+.SoundBlock{
+    position: absolute;
+    top: 10px;
+    left: -11px;
+}
+.Val{
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -65px;
+    top: -24px;
+    background: #2b2b2b;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #4a4a4a;
+    opacity: 0;
+    cursor: pointer;
+}
+.SoundBlock:hover .Val{
+    opacity: 1;
+}
+.UsBlock {
+    position: absolute;
+    top: 12px;
+    left: 87px;
+    width: 40px;
+    white-space: nowrap;
+}
+.CouOnline{
+    font-size: 14px;
+}
+.WrapPage {
+    display: none;
+}
+.WrActive {
+    display: block;
+}
+@media (max-width:1020px){
+    .a4 {
+        display: none;
+    }
+    .Mes1 {
+        width: 84%;
+        float: left;
+    }
+    .Mes2 {
+        width: 15%;
+        text-align: center;
+    }
+    .textarea {
+    width: 97%;
+    }
+    .WrapMenu {
+      width: 32%;  
+    }
+    .WrapChat
+    {
+      width: 67%;    
+    }
+}
+@media (max-width:940px){
+    .textarea {
+    width: 95%;
+    }
+    .WrapMenu {
+      width: 32%;  
+    }
+    .WrapChat
+    {
+      width: 67%;    
+    }
+}
+@media (max-width:900px){
+    .Mes1 {
+        width: 79%;
+        float: left;
+    }
+    .Mes2 {
+        width: 19%;
+        text-align: center;
+    }
+
+}
+@media (max-width:770px){
+.a0 {
+    display: inline-block;
+}
+.a1 {
+    display: none;
+}
+.a2 {
+    display: none;
+}
+.a3 {
+    display: none;
+}
+.a4 {
+    display: none;
+}
+.mobile {
+    position: absolute;
+    left: 0px;
+    top: 58px;
+    background: #101010;
+    box-shadow: 0 0 17px 3px #000000;
+}
+.show_a {
+ display: inline-block;   
+}
+.textarea {
+    width: 89%;
+    }
+}
+@media (max-width:580px){
+    .WrapMenu {
+    float: none;
+    width: 100%;
+    height: 416px;
+    display: block;
+}
+.WrapChat {
+    display: block;
+    width: 96%;
+    height: 97vh;
+    margin: 0 auto;
+}
+.page {
+    display: none;
+}
+.active {
+    display: block;
+}
+.global_menu {
+  display: block;
+}
+.WrapMenu img {
+   max-width: 264px;
+}
+.progress{
+    max-width: 264px;
+}
+.pre_order {
+    max-width: 264px;
+}
+.preWrapMenu{
+    max-width: 264px;
+}
+}
+@media (max-height:415px){
+.WrapMenu img {
+  display: none;
+}
+}
+@media (max-height:280px){
+.WrapMenu img {
+  display: none;
+}
+ .WrapMenu {
+    display: block;
+    width: 100%;
+}
+.WrapChat {
+    display: none;
+}
+.global_menu {
+  display: none;
+}
+}

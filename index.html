@@ -1,258 +1,404 @@
 <!DOCTYPE html>
-<html>
- <head>
-   <title>Lactofm</title>
-   <meta charset="utf-8">
-   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <script type="text/javascript" src="cordova.js"></script>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/AdminLTE.css">
+    <link rel="stylesheet" href="css/radio.css">
+	<script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-	
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-	<script src="js/jquery.min.js"></script>
-	<script src="js/menu.js"></script>
-	<script src="js/stat.js"></script>
-	<!-- <script src="js/AdMob.js"></script> -->
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/html5audio.js"></script>
+	<script type="text/javascript" src="js/jQuery-2.2.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>VTCpanel - радио</title>
+  </head>
+  <body style="margin: 0;">
+<section>
+  <div id="GlobalBackgound" style="background-image: url(img/radio.png);background-position: center;background-size: cover;filter: blur(51px);opacity: 0.4;width: 100%;height: 100vh;display: flex;justify-content: center;align-items: center;"></div>
+<div style="position: absolute;top: 0;width: 100%;">
+  <div class="WrapMenu page active">
+    <div class="preWrapMenu">
+    <div>
+    <img class="ImgSound" src="img/radio.png">
+    </div>
+    <div>
+      <div class="progress ActiveD"><div class="pre_progress" style="width:30%;"></div></div>
+    </div>
+    <div>
+      <div class="title">VTCpanel</div>
+      <div class="pretitle">Топ чарт</div>
+      <div>
+        <div style="position: relative;margin: 0 auto;width: 100px;">
+          <div class="SoundBlock"><i class="bi bi-volume-up" style="font-size: 21px;cursor:pointer"></i>
+            <div class="Val">
+              <input type="range" id="volumeRadio" min="0" max="1" step="0.1" value="0.3" style="width: 65px;"> 
+            </div>
+          </div>
+          <button class="ButtonPlay Clime" id="ButtonPlay" onclick="html5audio.play();">
+            <i class="bi bi-play-fill" style="font-size: 26px;"></i>
+          </button>
+          <button class="ButtonPause" id="Load" onclick="html5audio.stop();return false;" style="display:none;">
+            <img src="img/ecvoliser.gif" style="width: 100%;">
+          </button>
+          <button class="ButtonPause ClimeMini" id="ButtonPause" onclick="html5audio.stop();return false;" style="display:none;"> 
+            <i class="bi bi-pause-fill" style="font-size: 26px;"></i>
+          </button>
+          <div class="UsBlock">
+            <i class="bi bi-headphones" style="vertical-align: text-bottom;"></i><span class="CouOnline">12</span>
+          </div>
+        </div>
+        <div class="ActiveA" style="margin-top: 17px;font-size: 14px;">
+          <span class="blink"></span> <span>В эфире:</span> <a class="NameDidj" href="https://vtcpanel.com/id1">Александр Александров</a>
+        </div>
+        <div class="ActiveD pre_order">
+          <button class="order">Заказать песню</button>
+        </div>
+        </div>
+    </div>
+    </div>
+  </div>
+  <div class="WrapChat page">
+    <div class="shadow">
+      <div class="header"><img class="LogoMenu" src="img/Logo.png" alt="VTCpanel.com"> 
+        <div class="ChatTop">
+          <button class="button_top a0" style="border-left: 1px solid #2b1414;">
+            <div class="rtop">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg> МЕНЮ</div>
+         </button>
+         <div class="mobile">
+          <button class="button_top a1" style="border-left: 1px solid #2b1414;">
+           <div class="mtop"><i class="bi bi-chat-square-dots-fill"></i></div> <div class="rtop" style="margin-top: 8px;">ЧАТ</div>
+         </button>
+         <button class="button_top a2">
+           <div class="mtop"><i class="bi bi-clock-fill"></i></div> <div class="rtop">История<br>эфира</div>
+         </button>
+         <button class="button_top a3">
+           <div class="mtop"><i class="bi bi-calendar-week-fill"></i></div> <div class="rtop">Расписание<br>эфира</div>
+         </button>
+         <!--
+         <button class="button_top a4">
+          <div class="mtop"><i class="bi bi-person-bounding-box"></i></div> <div class="rtop" style="margin-top: 8px;">Админ</div>
+         </button>
+       -->
+         </div>
+        </div>
+      </div>
+      <div class="Wrap">
+        
+        <div class="WrapPage wp1 WrActive scroll">
+          <iframe src="https://vtcpanel.com/VTCRadioChat_frame.php" class="iframe" style="width: 100%;" frameborder="0"></iframe>
+        </div>
 
-	
-    
-	
- </head>
- <body>
- 
- <div class="body">
+       <div class="WrapPage wp2 scroll" style="height: 100%;">
+        <div style="padding: 30px 30px 0;">
+        <div style="font-size: 20px;margin-bottom: 10px;">История эфира:</div>
+        <div>
+          <table>
+              <tr>
+               <td><img id="track_img0" src="img/radio.png" width="50px" height="50px"></td>
+               <td><span id="track0"></span></td>
+             </tr>
+            <tr>
+              <td><img id="track_img1" src="img/radio.png" width="50px" height="50px"></td>
+              <td><span id="track1">Устанавливается соединение с сервером..</span></td>
+            </tr>
+            <tr>
+              <td><img id="track_img2" src="img/radio.png" width="50px" height="50px"></td>
+              <td><span id="track2"></span></td>
+            </tr>
+            <tr>
+             <td><img id="track_img3" src="img/radio.png" width="50px" height="50px"></td>
+             <td><span id="track3"></span></td>
+           </tr>
+           <tr>
+            <td ><img id="track_img4" src="img/radio.png" width="50px" height="50px"></td>
+            <td><span id="track4"></span></td>
+          </tr>
+          <tr>
+           <td><img id="track_img5" src="img/radio.png" width="50px" height="50px"></td>
+           <td><span id="track5"></td>
+           </tr>
+           <tr>
+            <td><img id="track_img6" src="img/radio.png" width="50px" height="50px"></td>
+            <td><span id="track6"></span></td>
+          </tr>
+          <tr>
+           <td><img id="track_img7" src="img/radio.png" width="50px" height="50px"></td>
+           <td><span id="track7"></td>
+           </tr>
+           <tr>
+             <td><img id="track_img8" src="img/radio.png" width="50px" height="50px"></td>
+             <td><span id="track8"></span></td>
+           </tr>
+           <tr>
+             <td><img id="track_img9" src="img/radio.png" width="50px" height="50px"></td>
+             <td><span id="track9"></td>
+             </tr>
+             <tr>
+               <td><img id="track_img10" src="img/radio.png" width="50px" height="50px"></td>
+               <td><span id="track10"></span></td>
+             </tr>
+             <tr>
+               <td><img id="track_img11" src="img/radio.png" width="50px" height="50px"></td>
+               <td><span id="track11"></span></td>
+             </tr>
+             <tr>
+               <td><img id="track_img12" src="img/radio.png" width="50px" height="50px"></td>
+               <td><span id="track12"></span></td>
+             </tr>
+             <tr>
+               <td><img id="track_img13" src="img/radio.png" width="50px" height="50px"></td>
+               <td><span id="track13"></span></td>
+             </tr>
+             <tr>
+               <td><img id="track_img14" src="img/radio.png" width="50px" height="50px"></td>
+               <td><span id="track14"></span></td>
+             </tr>
+       </table>
+        </div>
+        </div>
+       </div>
 
-	<div class="content">
-		<div  id="news" class="page">
-			
-			<!-- <iframe class="frmae" src="http://lactofm.ru/index.php/mobile"></iframe> -->
-<!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="102151/"></script> <!-- end feedwind code --> 
-		<br>
-			<br>
+       <div class="WrapPage wp3 scroll" style="height: 100%;">
+        <div style="padding: 30px 30px 0;">
+          <div style="font-size: 20px;margin-bottom: 10px;">Расписание эфира:</div>
+          <div>
+            Набираем в команду активных ведущих для дневных и вчерених эфиров.<br>Ждем Вашего отклика в <a href="https://vtcpanel.com/help" style="color: #2dd7fd;">технической поддержке</a>.
+          </div>
+        </div>
+       </div>
 
-		</div>
-		
-		
-		
-		<div  id="home" class="page active"> 
-				 <video id='video' loop poster="img/bg.jpg">
+<!--
+       <div class="WrapPage wp4 scroll" style="height: 100%;">
+        <div style="padding: 30px 30px 0;">
+          <div style="font-size: 20px;margin-bottom: 10px;">Администрирование:</div>
+          <div>
+            ..
+          </div>
+        </div>
+       </div>
+-->
 
-      <source id='mp4'
-        src="img/fon.mp4"
-        type='video/mp4'>
-   
 
-    </video>
-	<i class="fa fa-headphones" aria-hidden="true"><span id="listeners"></span></i>
-							<div class="cd"><img src="img/cd.gif"></img></div>
-				
-							<div class="music-name"><div id="ecvo" class="ecvo1">
-<div class="sc-status-widget">
-<center><span id="track"></span></center></div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="global_menu">
+    <button class="global_button gb1"><i class="bi bi-broadcast"></i> ЭФИР</button>
+    <button class="global_button gb2"><i class="bi bi-chat-square-dots-fill"></i> ЧАТ</button>
+  </div>
 </div>
-<!-- <script src="http://lactofm.ru/templates/protostar/js/host2.js"></script> -->
-</div>
-
-			 <div id="playcontrols">
-
-		  <a href="#" id="playbutton" onClick="html5audio.play();"><img src="images/playbutton.png" /></a>
-
-		  <a href="#" id="activityindicator" onClick="html5audio.stop();return false;"><img src="images/activityindicator.gif" /></a>
-
-		  <a href="#" id="stopbutton" onClick="html5audio.stop();return false;"><img src="images/stopbutton.png" /></a>
-
-	  </div>
-
-
-	  <script type="text/javascript">
-
-		  playButton = document.getElementById('playbutton');
-
-		  stopButton = document.getElementById('stopbutton');
-
-		  activityIndicator = document.getElementById('activityindicator');
-
-
-	  </script>
-			
-				
-		</div>
-		
-		
-		
-		<div  id="line" class="page">
-	<div class="soc">
-				<center><a href="http://vk.com/lactofm"><img src="img/vk.png" width="90%" height="90%"></a></center>	
-			</div>
-		<a id="order" href="#">Заказать трек</a> 
-			
-
-			
-	<center>	
-	<div style="font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, Sans-Serif;font-size: 20px;"> Ранее в эфире: </div>
-<div class="cctrack" style="overflow: hidden;border-radius: 20px;">	
-	
-<table>
-<tr>
-        <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">1</td>
-        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track1" style="display: inline-block;vertical-align: middle;">Нет интернета!</span> </td>
-    </tr>
-    <tr>
-        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">2</td>
-        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track2" style="display: inline-block;vertical-align: middle;"></span> </td>
-    </tr>
-    <tr>
-         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">3</td>
-        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track3" style="display: inline-block;vertical-align: middle;"></span> </td>
-    </tr>
-    <tr>
-        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">4</td>
-        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track4" style="display: inline-block;vertical-align: middle;"></span> </td>
-    </tr>
-    <tr>
-         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">5</td>
-        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track5" style="display: inline-block;vertical-align: middle;"></span> </td>
-    </tr>
-    <tr>
-        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">6</td>
-        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track6" style="display: inline-block;vertical-align: middle;"></span> </td>
-    </tr>
-    <tr>
-         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">7</td>
-        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track7" style="display: inline-block;vertical-align: middle;"></span> </td>
-    </tr>
-    <tr>
-        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">8</td>
-        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track8" style="display: inline-block;vertical-align: middle;"></span> </td>
-    </tr>
-    <tr>
-         <td style="color: #ff044b;font-family: monospace;font-size: 1.2em;">9</td>
-        <td style="color: #ff0072 !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track9" style="display: inline-block;vertical-align: middle;"></span> </td>
-    </tr>
-    <tr>
-        <td style="color: #00b8ff;font-family: monospace;font-size: 1.2em;">10</td>
-        <td style="color: #00b8ff !important;font-family: 'Roboto Condensed', sans-serif;font-size: 1.3em;"><span id="track10" style="display: inline-block;vertical-align: middle;"></span> </td>
-    </tr>
-</table>
-</center>
-<br>
-<br>
-<br>
-
-			</div>
-	
-	
-		</div>
-		
-	</div>
- 
- </div>
- <nav class="menu">
-	<!-- <button id="news" class="m-btn"><i class="fa fa-list-ul" aria-hidden="true"></i></button> -->
-	<button id="home" class="m-btn active"><i class="fa fa-play" aria-hidden="true"></i></button>
-	<button id="line" class="m-btn"><i class="fa fa-podcast" aria-hidden="true"></i>  </button>
- </nav>
- 
- 
- 
- <div id="RTWidgetTrackRequests" class="RTWidgetTrackRequests">
-
-
-
-
-
-
-<div class="sc-track-request-widget">
-<div is="track-request-widget" 
-lang="ru" 
-api-base="http://80.93.177.71:8080/api/v2" 
-server-id="1" 
-ip-timeout="1700000"
-track-timeout="3500000"
-bgcolor="#ffffff"
-bgopacity="0"
-tracks_num="5"
-track_width="180"
-track_image_default="http://80.93.177.71:8080/media/tracks/default_track_img.png"
-meta_font_size="14"
-meta_font_style="normal"
-meta_font_color="#8000ff"
-meta_opacity="1"
-button_color="#ffffff"
-button_color_active="#b79ce2"
-button_font_color="#8000ff"
-button_font_size="14"
-ordering="1"
-allow_person_and_message="true"
-modal_background_color="#ffffff"
-modal_font_color="#8000ff"
-modal_background_opacity="1"
->
-</div>
-</div>
-
-
-
+</section>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
-var overlay = document.getElementById('ecvo');
-var video = document.getElementById('video');
-
-
-
-function test1() { 
-		video.play();
-        overlay.className = "ecvo2";
-    }
-
-
-function test2() { 
-		video.pause();
-        overlay.className = "ecvo1";
-    }
-	
-
-
-</script>	
-
-
-</div>
-<div class="RTWidgetTrackRequests2"><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
- 
- 
- 
- <script>
-$(document).ready(
-function(){
-	
-$("#order").on('click', function() {
-	
-	$(".RTWidgetTrackRequests").addClass("active");
-	$(".RTWidgetTrackRequests2").addClass("active");
-	
+function setHeiHeight() {
+  if ($(window).width()> 580) {
+    var k = 86;
+  }else{
+    var k = 147;
+  }
+   $('.Wrap, .iframe').css({height: $(window).height() - k + 'px'});
+  }
+setHeiHeight();
+$(window).resize(setHeiHeight);
+$('.a0').click(function(){
+  $('.a1, .a2, .a3, .a4').addClass('show_a');
 });
-
-$(".RTWidgetTrackRequests2").on('click', function() {
-	$(".RTWidgetTrackRequests").removeClass("active");
-	$(".RTWidgetTrackRequests2").removeClass("active");
-	
+$('.gb1').click(function(){
+  $('.WrapMenu').addClass('active');
+  $('.WrapChat').removeClass('active');
 });
-
-
-$(".Messages").on('click', function() {
-$(".Messages").toggleClass("active");
+$('.gb2').click(function(){
+  $('.WrapChat').addClass('active');
+  $('.WrapMenu').removeClass('active');
 });
-	
+$('.a1').click(function(){
+  $('.WrapPage').removeClass('WrActive');
+  $('.wp1').addClass('WrActive');
+  $('.Mes1, .Mes2').show();
+});
+$('.a2').click(function(){
+  $('.WrapPage').removeClass('WrActive');
+  $('.wp2').addClass('WrActive');
+  $('.Mes1, .Mes2').hide();
+});
+$('.a3').click(function(){
+  $('.WrapPage').removeClass('WrActive');
+  $('.wp3').addClass('WrActive');
+  $('.Mes1, .Mes2').hide();
+});
+$('.a4').click(function(){
+  $('.WrapPage').removeClass('WrActive');
+  $('.wp4').addClass('WrActive');
+  $('.Mes1, .Mes2').hide();
+});
+$(document).on('click', 'body', function(e){
+  if($(e.target).closest('.a0').length==0) $('.a1, .a2, .a3, .a4').removeClass('show_a');
+});
+var progressTimer,playButton=document.getElementById("ButtonPlay"),stopButton=document.getElementById("ButtonPause"),activityIndicator=document.getElementById("Load");function onError(t){console.log(t.message)}function onConfirmRetry(t){1==t&&html5audio.play()}var readyStateInterval=null;
+var html5audio = {
+  play: function()
+  {
+    isPlaying = true;
+    myaudioURL = 'http://80.249.151.197:8000/stream';
+    myaudio = new Audio(myaudioURL);
+    myaudio.play();
+    let volume = $("#volumeRadio").val();
+    myaudio.volume = volume;
+    readyStateInterval = setInterval(function(){
+       if (myaudio.readyState <= 1) {
+         playButton.style.display = 'none';
+         activityIndicator.style.display = 'inline-block';
+       }
+    },10000);
+    $("#volumeRadio").change(function(){
+      let volume = $(this).val();
+      myaudio.volume = volume ;
+    });
+    var g = $('.CouOnline').html();
+    $('.CouOnline').html(+g + 1);
+    myaudio.addEventListener("error", function() {
+       console.log('VTC Radio ERROR');
+    }, false);
+    myaudio.addEventListener("canplay", function() {
+       console.log('VTC Radio CAN PLAY');
+    }, false);
+    myaudio.addEventListener("waiting", function() {
+       //console.log('myaudio WAITING');
+       isPlaying = false;
+       playButton.style.display = 'none';
+       stopButton.style.display = 'none';
+       activityIndicator.style.display = 'inline-block';
+    }, false);
+    myaudio.addEventListener("playing", function() {
+       isPlaying = true;
+       playButton.style.display = 'none';
+       activityIndicator.style.display = 'none';
+       stopButton.style.display = 'inline-block';
+    }, false);
+
+    myaudio.addEventListener("ended", function() {
+       console.log('myaudio ENDED');
+      html5audio.stop();  
+       navigator.notification.alert('Streaming failed. Possibly due to a network error.', null, 'Stream error', 'OK');
+        navigator.notification.confirm('Streaming failed. Possibly due to a network error.',onConfirmRetry,'Stream error','Retry,OK'
+        );
+       if (window.confirm('Streaming failed. Possibly due to a network error. Retry?')) {
+        onConfirmRetry();
+       }
+    }, false);
+  },
+  stop: function() {
+    isPlaying = false;
+    clearInterval(readyStateInterval);
+    myaudio.pause();  
+    stopButton.style.display = 'none';
+    activityIndicator.style.display = 'none';
+    playButton.style.display = 'inline-block';
+    myaudio = null;
+  }
+};
+$( document ).ready(function() {
+ function updateTrack(){
+   $.ajax({
+ url: "http://80.249.151.197:8080/api/v2/history/?server=1&limit=1&callback=callback&format=jsonp",
+ jsonp: "callback",
+ dataType: "jsonp",
+ method: "GET",
+ success: function( response ) {
+  if (response.results[0].length > 0) {
+  $(".ActiveD").show();
+  $(".ActiveA").hide();
+  var ts = response.results[0].ts;
+  var length = response.results[0].length;
+  var percent = ($.now() - ts)*100/length;
+  if (percent > 100) {percent = 100}
+  $(".pre_progress").css('width',percent+'%');
+ }else{
+  $(".ActiveD").hide();
+  $(".ActiveA").show();
+  $AdminArr = response.results[0].dj_name.split(' - ');
+  if ($AdminArr[1] != null) {
+  $(".NameDidj").html($AdminArr[1]);
+  $(".NameDidj").attr('href', 'https://vtcpanel.com/id'+$AdminArr[0]);
+}else{
+  $(".NameDidj").html($AdminArr[0]);
+  $(".NameDidj").attr('href', 'https://vtcpanel.com/');
 }
-);
+ }
+  if (response.results[0].author != "") {
+    $(".pretitle").text(response.results[0].title);
+    $(".title").text(response.results[0].author);
+  }else{
+    $metaArr = response.results[0].metadata.split(' - ');
+    $(".title").text($metaArr[0]);
+    $(".pretitle").text($metaArr[1]);
+  }
+  if (response.results[0].img_url != null) {
+    if (response.results[0].img_url != "") {
+    $(".ImgSound").attr('src', response.results[0].img_url);
+    $("#GlobalBackgound").css('background-image', 'url('+response.results[0].img_url+')');
+   }else
+   {
+    $(".ImgSound").attr('src', 'img/radio.png'); 
+   $("#GlobalBackgound").css('background-image','url(img/radio.png)');
+   }
+  } else 
+  {
+   $(".ImgSound").attr('src', 'img/radio.png'); 
+   $("#GlobalBackgound").css('background-image','url(img/radio.png)');
+  }
+  
+ }
+});
+ }
+ updateTrack();
+ setInterval(updateTrack, 5*1000);
+
+ function updateHistory(){
+   $.ajax({
+     url: "http://80.249.151.197:8080/api/v2/history/?server=1&limit=15&callback=callback&format=jsonp",
+     jsonp: "callback",
+     dataType: "jsonp",
+     method: "GET",
+     success: function( response ) {
+       for (var i = 0; i < 15; ++i) {
+         $("#track"+i).text(response.results[i].metadata);
+         if (response.results[i].img_url != null) {
+          if (response.results[i].img_url != "") {
+            $("#track_img"+i).attr('src', response.results[i].img_url);
+          }else
+          {
+            $("#track_img"+i).attr('src', 'img/radio.png'); 
+          }
+        } else 
+        {
+         $("#track_img"+i).attr('src', 'img/radio.png'); 
+       }
+       }
+     }
+   });
+ }
+ updateHistory();
+ $('.a2').click(function(){
+  updateHistory();
+});
+ function CouOnline(){
+   $.ajax({
+  url: "http://80.249.151.197:8080/api/channels/?server=1&callback=callback&format=jsonp",
+  jsonp: "callback",
+  dataType: "jsonp",
+  method: "GET",
+  success: function(response) {
+   $(".CouOnline").text(response.objects[0].listeners_air);
+ }
+});
+ }
+ CouOnline();
+ setInterval(CouOnline, 30000);
+});
 </script>
-
-
- 
- <link rel="stylesheet" type="text/css" href="css/request_widget.css" />
-<script type="text/javascript" src="js/request_widget.js"></script>
-
- </body> 
+</body>
 </html>
