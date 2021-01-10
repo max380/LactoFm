@@ -91,7 +91,7 @@
     -->
 
 <preference name='phonegap-version' value='cli-9.0.0' />
-
+<preference name="android-minSdkVersion" value="29" />
     <!-- Plugins 
 	
 	<plugin name="cordova-plugin-splashscreen"      source="npm">
