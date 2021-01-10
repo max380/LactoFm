@@ -6,35 +6,20 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="css/AdminLTE.css">
     <link rel="stylesheet" href="css/radio.css">
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/jQuery-2.2.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="https://vtcpanel.com/favicon.ico" type="image/x-icon">
-    <title>VTC Radio | Радио VTCpanel</title>
-    <style>
-      .index_btn {
-        background: none;
-        border: 1px solid rgb(221 221 221 / 62%);
-        color: #ddd;
-        font-size: 14px;
-        width: 100%;
-        padding: 6px 0;
-        cursor: pointer;
-      }
-      .global_menu {
-        width: 94vw;
-      }
-    </style>
+    <title>VTCpanel - радио</title>
   </head>
   <body style="margin: 0;">
 <section>
   <div id="GlobalBackgound" style="background-image: url(img/radio.png);background-position: center;background-size: cover;filter: blur(51px);opacity: 0.4;width: 100%;height: 100vh;display: flex;justify-content: center;align-items: center;"></div>
 <div style="position: absolute;top: 0;width: 100%;">
   <div class="WrapMenu page active">
-    <div class="MobileHeader">
-      <div><img src="img/RadioLogo.png" style="width: 125px;"></div>
-    </div>
     <div class="preWrapMenu">
     <div>
-    <img class="ImgSound" src="imgradio.png">
+    <img class="ImgSound" src="img/radio.png">
     </div>
     <div>
       <div class="progress ActiveD"><div class="pre_progress" style="width:30%;"></div></div>
@@ -44,6 +29,11 @@
       <div class="pretitle">Топ чарт</div>
       <div>
         <div style="position: relative;margin: 0 auto;width: 100px;">
+          <div class="SoundBlock"><i class="bi bi-volume-up" style="font-size: 21px;cursor:pointer"></i>
+            <div class="Val">
+              <input type="range" id="volumeRadio" min="0" max="1" step="0.1" value="0.3" style="width: 65px;"> 
+            </div>
+          </div>
           <button class="ButtonPlay Clime" id="ButtonPlay" onclick="html5audio.play();">
             <i class="bi bi-play-fill" style="font-size: 26px;"></i>
           </button>
@@ -58,14 +48,10 @@
           </div>
         </div>
         <div class="ActiveA" style="margin-top: 17px;font-size: 14px;">
-          <span class="blink"></span> <span>В эфире:</span> <a class="NameDidj" href="https://vtcpanel.com/id1">DJ VTCpanel</a>
+          <span class="blink"></span> <span>В эфире:</span> <a class="NameDidj" href="https://vtcpanel.com/id1">Александр Александров</a>
         </div>
-        <div class="pre_order">
-          <div class="ActiveD">
-          <button class="order">Заказать песню</button><br><br>
-          </div>
-          <button class="index_btn index_1">История эфира</button><br><br>
-          <button class="index_btn index_2">Расписание эфира</button>
+        <div class="ActiveD pre_order">
+          <button class="order">Заказать песню</button>
         </div>
         </div>
     </div>
@@ -177,7 +163,7 @@
         <div style="padding: 30px 30px 0;">
           <div style="font-size: 20px;margin-bottom: 10px;">Расписание эфира:</div>
           <div>
-            Набираем в команду активных ведущих для дневных и вечерених эфиров.<br>Ждем Вашего отклика в <a href="https://vtcpanel.com/help" style="color: #2dd7fd;">технической поддержке</a>.
+            Набираем в команду активных ведущих для дневных и вчерених эфиров.<br>Ждем Вашего отклика в <a href="https://vtcpanel.com/help" style="color: #2dd7fd;">технической поддержке</a>.
           </div>
         </div>
        </div>
@@ -204,35 +190,54 @@
   </div>
 </div>
 </section>
-<div class="PreModalOrder">
-  <div class="ModalOrder">
-    <button class="CloseModalOrder"><i class="bi bi-x"></i></button>
-    <div class="scroll HeightModalOrder" style="height: 497px;width: 99%;">
-      <div class="sc-track-request-widget" style="padding: 0;">
-        <div is="track-request-widget" lang="ru" api-base="http://80.249.151.197:8080/api/v2" server-id="1" ip-timeout="600000" track-timeout="3600000" bgcolor="#171717" bgopacity="1" tracks_num="20" track_width="180" track_image_default="img/radio.png" meta_font_size="14" meta_font_style="normal" meta_font_color="#dedede" meta_opacity="1" button_color="#0c4613" button_color_active="#09531c" button_font_color="#00ff2a" button_font_size="14" ordering="3" allow_person_and_message="true" modal_background_color="#171717" modal_font_color="#cccccc" modal_background_opacity="1">
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-<script src="js/jQuery-2.2.0.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
-function setHeiHeight(){var e;e=580<$(window).width()?86:147,$(".Wrap, .iframe").css({height:$(window).height()-e+"px"})}setHeiHeight(),$(window).resize(setHeiHeight),$(".a0").click(function(){$(".a1, .a2, .a3, .a4").addClass("show_a")}),$(".gb1").click(function(){$(".WrapMenu").addClass("active"),$(".WrapChat").removeClass("active")}),$(".gb2").click(function(){$(".WrapChat").addClass("active"),$(".WrapMenu").removeClass("active")}),$(".a1").click(function(){$(".WrapPage").removeClass("WrActive"),$(".wp1").addClass("WrActive"),$(".Mes1, .Mes2").show()}),$(".a2").click(function(){$(".WrapPage").removeClass("WrActive"),$(".wp2").addClass("WrActive"),$(".Mes1, .Mes2").hide()}),$(".a3").click(function(){$(".WrapPage").removeClass("WrActive"),$(".wp3").addClass("WrActive"),$(".Mes1, .Mes2").hide()}),$(".a4").click(function(){$(".WrapPage").removeClass("WrActive"),$(".wp4").addClass("WrActive"),$(".Mes1, .Mes2").hide()}),$(document).on("click","body",function(e){0==$(e.target).closest(".a0").length&&$(".a1, .a2, .a3, .a4").removeClass("show_a")});
-var progressTimer,playButton=document.getElementById("ButtonPlay"),stopButton=document.getElementById("ButtonPause"),activityIndicator=document.getElementById("Load");function onError(t){console.log(t.message)}function onConfirmRetry(t){1==t&&html5audio.play()}var readyStateInterval=null;
-$('.index_1').click(function(){
+function setHeiHeight() {
+  if ($(window).width()> 580) {
+    var k = 86;
+  }else{
+    var k = 147;
+  }
+   $('.Wrap, .iframe').css({height: $(window).height() - k + 'px'});
+  }
+setHeiHeight();
+$(window).resize(setHeiHeight);
+$('.a0').click(function(){
+  $('.a1, .a2, .a3, .a4').addClass('show_a');
+});
+$('.gb1').click(function(){
+  $('.WrapMenu').addClass('active');
+  $('.WrapChat').removeClass('active');
+});
+$('.gb2').click(function(){
   $('.WrapChat').addClass('active');
   $('.WrapMenu').removeClass('active');
+});
+$('.a1').click(function(){
+  $('.WrapPage').removeClass('WrActive');
+  $('.wp1').addClass('WrActive');
+  $('.Mes1, .Mes2').show();
+});
+$('.a2').click(function(){
   $('.WrapPage').removeClass('WrActive');
   $('.wp2').addClass('WrActive');
+  $('.Mes1, .Mes2').hide();
 });
-$('.index_2').click(function(){
-  $('.WrapChat').addClass('active');
-  $('.WrapMenu').removeClass('active');
+$('.a3').click(function(){
   $('.WrapPage').removeClass('WrActive');
   $('.wp3').addClass('WrActive');
+  $('.Mes1, .Mes2').hide();
 });
+$('.a4').click(function(){
+  $('.WrapPage').removeClass('WrActive');
+  $('.wp4').addClass('WrActive');
+  $('.Mes1, .Mes2').hide();
+});
+$(document).on('click', 'body', function(e){
+  if($(e.target).closest('.a0').length==0) $('.a1, .a2, .a3, .a4').removeClass('show_a');
+});
+var progressTimer,playButton=document.getElementById("ButtonPlay"),stopButton=document.getElementById("ButtonPause"),activityIndicator=document.getElementById("Load");function onError(t){console.log(t.message)}function onConfirmRetry(t){1==t&&html5audio.play()}var readyStateInterval=null;
 var html5audio = {
   play: function()
   {
@@ -240,13 +245,18 @@ var html5audio = {
     myaudioURL = 'http://80.249.151.197:8000/stream';
     myaudio = new Audio(myaudioURL);
     myaudio.play();
-    myaudio.volume = 0.8;
+    let volume = $("#volumeRadio").val();
+    myaudio.volume = volume;
     readyStateInterval = setInterval(function(){
        if (myaudio.readyState <= 1) {
          playButton.style.display = 'none';
          activityIndicator.style.display = 'inline-block';
        }
     },10000);
+    $("#volumeRadio").change(function(){
+      let volume = $(this).val();
+      myaudio.volume = volume ;
+    });
     var g = $('.CouOnline').html();
     $('.CouOnline').html(+g + 1);
     myaudio.addEventListener("error", function() {
@@ -345,7 +355,8 @@ $( document ).ready(function() {
 });
  }
  updateTrack();
- setInterval(updateTrack, 5000);
+ setInterval(updateTrack, 5*1000);
+
  function updateHistory(){
    $.ajax({
      url: "http://80.249.151.197:8080/api/v2/history/?server=1&limit=15&callback=callback&format=jsonp",
@@ -353,21 +364,41 @@ $( document ).ready(function() {
      dataType: "jsonp",
      method: "GET",
      success: function( response ) {
-       for(var i=0;i<15;++i)$("#track"+i).text(response.results[i].metadata),null!=response.results[i].img_url&&""!=response.results[i].img_url?$("#track_img"+i).attr("src",response.results[i].img_url):$("#track_img"+i).attr("src","img/radio.png");
+       for (var i = 0; i < 15; ++i) {
+         $("#track"+i).text(response.results[i].metadata);
+         if (response.results[i].img_url != null) {
+          if (response.results[i].img_url != "") {
+            $("#track_img"+i).attr('src', response.results[i].img_url);
+          }else
+          {
+            $("#track_img"+i).attr('src', 'img/radio.png'); 
+          }
+        } else 
+        {
+         $("#track_img"+i).attr('src', 'img/radio.png'); 
+       }
+       }
      }
    });
  }
  updateHistory();
- $('.a2, .index_1').click(function(){
+ $('.a2').click(function(){
   updateHistory();
-  setInterval(updateHistory, 15000);
 });
-function CouOnline(){$.ajax({url:"http://80.249.151.197:8080/api/channels/?server=1&callback=callback&format=jsonp",jsonp:"callback",dataType:"jsonp",method:"GET",success:function(a){$(".CouOnline").text(a.objects[0].listeners_air)}})}
+ function CouOnline(){
+   $.ajax({
+  url: "http://80.249.151.197:8080/api/channels/?server=1&callback=callback&format=jsonp",
+  jsonp: "callback",
+  dataType: "jsonp",
+  method: "GET",
+  success: function(response) {
+   $(".CouOnline").text(response.objects[0].listeners_air);
+ }
+});
+ }
  CouOnline();
  setInterval(CouOnline, 30000);
 });
-$(".order").click(function(){$(".HeightModalOrder").css({height:$(window).height()-61+"px"}),$(".PreModalOrder").show()}),$(".PreModalOrder").click(function(e){0==$(e.target).closest(".HeightModalOrder").length&&$(".PreModalOrder").hide()});
 </script>
-<script type="text/javascript" src="js/request_widget.js"></script>
 </body>
 </html>
