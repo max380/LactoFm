@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/AdminLTE.css">
     <link rel="stylesheet" href="css/radio.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="https://vtcpanel.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <title>VTC Radio | Радио VTCpanel</title>
     <style>
       .index_btn {
@@ -34,7 +36,7 @@
     </div>
     <div class="preWrapMenu">
     <div>
-    <img class="ImgSound" src="imgradio.png">
+    <img class="ImgSound" src="img/radio.png">
     </div>
     <div>
       <div class="progress ActiveD"><div class="pre_progress" style="width:30%;"></div></div>
@@ -297,50 +299,10 @@ $( document ).ready(function() {
  jsonp: "callback",
  dataType: "jsonp",
  method: "GET",
- success: function( response ) {
-  if (response.results[0].length > 0) {
-  $(".ActiveD").show();
-  $(".ActiveA").hide();
-  var ts = response.results[0].ts;
-  var length = response.results[0].length;
-  var percent = ($.now() - ts)*100/length;
-  if (percent > 100) {percent = 100}
-  $(".pre_progress").css('width',percent+'%');
- }else{
-  $(".ActiveD").hide();
-  $(".ActiveA").show();
-  $AdminArr = response.results[0].dj_name.split(' - ');
-  if ($AdminArr[1] != null) {
-  $(".NameDidj").html($AdminArr[1]);
-  $(".NameDidj").attr('href', 'https://vtcpanel.com/id'+$AdminArr[0]);
-}else{
-  $(".NameDidj").html($AdminArr[0]);
-  $(".NameDidj").attr('href', 'https://vtcpanel.com/');
-}
- }
-  if (response.results[0].author != "") {
-    $(".pretitle").text(response.results[0].title);
-    $(".title").text(response.results[0].author);
-  }else{
-    $metaArr = response.results[0].metadata.split(' - ');
-    $(".title").text($metaArr[0]);
-    $(".pretitle").text($metaArr[1]);
-  }
-  if (response.results[0].img_url != null) {
-    if (response.results[0].img_url != "") {
-    $(".ImgSound").attr('src', response.results[0].img_url);
-    $("#GlobalBackgound").css('background-image', 'url('+response.results[0].img_url+')');
-   }else
-   {
-    $(".ImgSound").attr('src', 'img/radio.png'); 
-   $("#GlobalBackgound").css('background-image','url(img/radio.png)');
-   }
-  } else 
-  {
-   $(".ImgSound").attr('src', 'img/radio.png'); 
-   $("#GlobalBackgound").css('background-image','url(img/radio.png)');
-  }
-  
+  success: function( response ) {
+  var ts,length,percent;0<response.results[0].length?($(".ActiveD").show(),$(".ActiveA").hide(),ts=response.results[0].ts,length=response.results[0].length,100<(percent=100*($.now()-ts)/length)&&(percent=100),$(".pre_progress").css("width",percent+"%")):($(".ActiveD").hide(),$(".ActiveA").show(),$AdminArr=response.results[0].dj_name.split(" - "),null!=$AdminArr[1]?($(".NameDidj").html($AdminArr[1]),$(".NameDidj").attr("href","https://vtcpanel.com/id"+$AdminArr[0])):($(".NameDidj").html($AdminArr[0]),$(".NameDidj").attr("href","https://vtcpanel.com/")));
+ ""!=response.results[0].author?($(".pretitle").text(response.results[0].title),$(".title").text(response.results[0].author)):($metaArr=response.results[0].metadata.split(" - "),$(".title").text($metaArr[0]),$(".pretitle").text($metaArr[1]));
+  null!=response.results[0].img_large_url&&""!=response.results[0].img_large_url?($(".ImgSound").attr("src",response.results[0].img_large_url),$("#GlobalBackgound").css("background-image","url("+response.results[0].img_large_url+")")):null!=response.results[0].img_url&&""!=response.results[0].img_url?($(".ImgSound").attr("src",response.results[0].img_url),$("#GlobalBackgound").css("background-image","url("+response.results[0].img_url+")")):($(".ImgSound").attr("src","img/radio.png"),$("#GlobalBackgound").css("background-image","url(img/radio.png)"));
  }
 });
  }
