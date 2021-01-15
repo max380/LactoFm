@@ -15,7 +15,7 @@
 
         id        = "com.lactofm"
 
-        version   = "3.9">
+        version   = "4.0">
 
 
 
@@ -92,7 +92,6 @@
 
 <preference name='phonegap-version' value='cli-9.0.0' />
 <preference name="android-targetSdkVersion" value="29" />
-<preference name="android-minSdkVersion" value="29" />
     <!-- Plugins 
 	
 	<plugin name="cordova-plugin-splashscreen"      source="npm">
