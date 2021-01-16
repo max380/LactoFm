@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="css/AdminLTE.css">
     <link rel="stylesheet" href="css/radio.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="font/bootstrap-icons.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="ActiveA" style="margin-top: 17px;font-size: 14px;">
-          <span class="blink"></span> <span>В эфире:</span> <a class="NameDidj" href="https://vtcpanel.com/id1">DJ VTCpanel</a>
+          <span class="blink"></span> <span>В эфире:</span> <a target="_blank" class="NameDidj" href="https://vtcpanel.com/id1">DJ VTCpanel</a>
         </div>
         <div class="pre_order">
           <div class="ActiveD">
@@ -91,11 +91,10 @@
          <button class="button_top a3">
            <div class="mtop"><i class="bi bi-calendar-week-fill"></i></div> <div class="rtop">Расписание<br>эфира</div>
          </button>
-         <!--
+      
          <button class="button_top a4">
-          <div class="mtop"><i class="bi bi-person-bounding-box"></i></div> <div class="rtop" style="margin-top: 8px;">Админ</div>
+          <div class="mtop"><i class="bi bi-person-bounding-box"></i></div> <div class="rtop" style="margin-top: 8px;">Ведущие</div>
          </button>
-       -->
          </div>
         </div>
       </div>
@@ -176,24 +175,17 @@
        </div>
 
        <div class="WrapPage wp3 scroll" style="height: 100%;">
-        <div style="padding: 30px 30px 0;">
-          <div style="font-size: 20px;margin-bottom: 10px;">Расписание эфира:</div>
-          <div>
-            Набираем в команду активных ведущих для дневных и вечерених эфиров.<br>Ждем Вашего отклика в <a href="https://vtcpanel.com/help" style="color: #2dd7fd;">технической поддержке</a>.
-          </div>
+        <div class="H_iframe">
+
         </div>
        </div>
 
-<!--
+
        <div class="WrapPage wp4 scroll" style="height: 100%;">
-        <div style="padding: 30px 30px 0;">
-          <div style="font-size: 20px;margin-bottom: 10px;">Администрирование:</div>
-          <div>
-            ..
-          </div>
+        <div class="DJ_iframe">
+
         </div>
-       </div>
--->
+      </div>
 
 
       </div>
@@ -329,6 +321,8 @@ function CouOnline(){$.ajax({url:"http://80.249.151.197:8080/api/channels/?serve
  setInterval(CouOnline, 30000);
 });
 $(".order").click(function(){$(".HeightModalOrder").css({height:$(window).height()-61+"px"}),$(".PreModalOrder").show()}),$(".PreModalOrder").click(function(e){0==$(e.target).closest(".HeightModalOrder").length&&$(".PreModalOrder").hide()});
+
+$(".a4").click(function(){var a;$(".DJ_iframe").html('<iframe src="https://vtcpanel.com/VTCRadioDJ_frame.php" class="iframe iframe_load" style="width: 100%;" frameborder="0"></iframe>'),a=580<$(window).width()?91:152,$(".iframe_load").css({height:$(window).height()-a+"px"})}),$(".a3,.index_2").click(function(){var a;$(".H_iframe").html('<iframe src="https://vtcpanel.com/VTCRadioH_frame.php" class="iframe iframe_load" style="width: 100%;" frameborder="0"></iframe>'),a=580<$(window).width()?91:152,$(".iframe_load").css({height:$(window).height()-a+"px"})});
 </script>
 <script type="text/javascript" src="js/request_widget.js"></script>
 </body>

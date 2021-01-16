@@ -15,7 +15,7 @@
 
         id        = "com.lactofm"
 
-        version   = "4.0">
+        version   = "4.1">
 
 
 
@@ -150,7 +150,7 @@
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
 	<preference name="BackupWebStorage" value="local" /> -->
-	<preference name="SplashScreenDelay" value="7000" />
+	<preference name="SplashScreenDelay" value="5000" />
 	<preference name="FadeSplashScreen"           value="1000"/>
 	<preference name="ShowSplashScreenSpinner"    value="true" />
 	<preference name="SplashShowOnlyFirstTime" 	value="true" />
