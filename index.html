@@ -231,6 +231,7 @@ $('.index_2').click(function(){
 var html5audio = {
   play: function()
   {
+	MusicControls.listen();
     isPlaying = true;
     myaudioURL = 'http://80.249.151.197:8000/stream';
     myaudio = new Audio(myaudioURL);
