@@ -144,6 +144,7 @@
     <!-- </plugin> -->
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
+	<plugin name="cordova-music-controls-plugin" />	
 	<!-- <plugin name="cordova-plugin-appcenter-analytics" /> -->
 	<!-- <plugin name="cordova-plugin-appcenter-crashes" /> -->
 
