@@ -213,6 +213,45 @@
 <script src="js/jQuery-2.2.0.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="@voiceofamerica/cordova-plugin-music-controls/www/MusicControls.js"></script>
+<script>
+  MusicControls.create({
+ track       : 'Time is Running Out',    // optional, default : ''
+  artist      : 'Muse',            // optional, default : ''
+  cover       : 'albums/absolution.jpg',    // optional, default : nothing
+  // cover can be a local path (use fullpath 'file:///storage/emulated/...', or only 'my_image.jpg' if my_image.jpg is in the www folder of your app)
+  //       or a remote url ('http://...', 'https://...', 'ftp://...')
+  isPlaying   : true,              // optional, default : true
+  dismissable : true,              // optional, default : false
+
+  // hide previous/next/close buttons:
+  hasPrev   : false,    // show previous button, optional, default: true
+  hasNext   : false,    // show next button, optional, default: true
+  hasClose  : true,    // show close button, optional, default: false
+
+  // iOS only, optional
+  album       : 'Absolution',     // optional, default: ''
+  duration : 60, // optional, default: 0
+  elapsed : 10, // optional, default: 0
+  hasSkipForward : true, //optional, default: false. true value overrides hasNext.
+  hasSkipBackward : true, //optional, default: false. true value overrides hasPrev.
+  skipForwardInterval : 15, //optional. default: 0.
+  skipBackwardInterval : 15, //optional. default: 0.
+  hasScrubbing : false, //optional. default to false. Enable scrubbing from control center progress bar
+
+  // Android only, optional
+  // text displayed in the status bar when the notification (and the ticker) are updated
+  ticker    : 'Now playing "Time is Running Out"',
+  //All icons default to their built-in android equivalents
+  //The supplied drawable name, e.g. 'media_play', is the name of a drawable found under android/res/drawable* folders
+  playIcon: 'media_play',
+  pauseIcon: 'media_pause',
+  prevIcon: 'media_prev',
+  nextIcon: 'media_next',
+  closeIcon: 'media_close',
+  notificationIcon: 'notification'
+}, onSuccess, onError);
+</script>
 <script type="text/javascript">
 function setHeiHeight(){var e;e=580<$(window).width()?86:147,$(".Wrap, .iframe").css({height:$(window).height()-e+"px"})}setHeiHeight(),$(window).resize(setHeiHeight),$(".a0").click(function(){$(".a1, .a2, .a3, .a4").addClass("show_a")}),$(".gb1").click(function(){$(".WrapMenu").addClass("active"),$(".WrapChat").removeClass("active")}),$(".gb2").click(function(){$(".WrapChat").addClass("active"),$(".WrapMenu").removeClass("active"),$('.WrapPage').removeClass('WrActive'),$('.wp1').addClass('WrActive')}),$(".a1").click(function(){$(".WrapPage").removeClass("WrActive"),$(".wp1").addClass("WrActive"),$(".Mes1, .Mes2").show()}),$(".a2").click(function(){$(".WrapPage").removeClass("WrActive"),$(".wp2").addClass("WrActive"),$(".Mes1, .Mes2").hide()}),$(".a3").click(function(){$(".WrapPage").removeClass("WrActive"),$(".wp3").addClass("WrActive"),$(".Mes1, .Mes2").hide()}),$(".a4").click(function(){$(".WrapPage").removeClass("WrActive"),$(".wp4").addClass("WrActive"),$(".Mes1, .Mes2").hide()}),$(document).on("click","body",function(e){0==$(e.target).closest(".a0").length&&$(".a1, .a2, .a3, .a4").removeClass("show_a")});
 var progressTimer,playButton=document.getElementById("ButtonPlay"),stopButton=document.getElementById("ButtonPause"),activityIndicator=document.getElementById("Load");function onError(t){console.log(t.message)}function onConfirmRetry(t){1==t&&html5audio.play()}var readyStateInterval=null;
