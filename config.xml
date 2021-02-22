@@ -15,7 +15,7 @@
 
         id        = "com.lactofm"
 
-        version   = "4.2">
+        version   = "4.3">
 
 
 
@@ -264,9 +264,14 @@
 
   <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
       <application android:usesCleartextTraffic="true" />
+	  <meta-data android:name="com.onesignal.NotificationAccentColor.DEFAULT" android:value="FF00FF00" />
   </edit-config>
 
 		<resource-file src="/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" />
+		
+		<resource-file src="/res/drawable-xxxhdpi/onesignal_bgimage_default_image.png" target="app/src/main/res/drawable-xxxhdpi/onesignal_bgimage_default_image.png" />
+		
+		<resource-file src="/res/values/colors.xml" target="app/src/main/res/values/colors.xml" />
 		
 		<resource-file src="/res/raw/onesignal_default_sound.mp3" target="app/src/main/res/raw/onesignal_default_sound.mp3" />
 		
