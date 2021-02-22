@@ -144,13 +144,10 @@
     <!-- </plugin> -->
 	<plugin name="cordova-plugin-background-audio" source="npm" />
     <plugin name="cordova-plugin-splashscreen" />	
-	<plugin name="cordova-plugin-music-controls2" />	
-	<!-- <plugin name="cordova-plugin-appcenter-analytics" /> -->
-	<!-- <plugin name="cordova-plugin-appcenter-crashes" /> -->
 
 
 	<preference name="LoadUrlTimeoutValue" value="1000000" />
-	<preference name="BackupWebStorage" value="local" /> -->
+	<preference name="BackupWebStorage" value="local" /> 
 	<preference name="SplashScreenDelay" value="5000" />
 	<preference name="FadeSplashScreen"           value="1000"/>
 	<preference name="ShowSplashScreenSpinner"    value="true" />
@@ -273,7 +270,11 @@
 		
 		<resource-file src="/res/raw/onesignal_default_sound.mp3" target="app/src/main/res/raw/onesignal_default_sound.mp3" />
 		
-		<resource-file src="/res/raw/eror404.mp3" target="app/src/main/res/raw/eror404.mp3" />
+		<resource-file src="/res/raw/bratan.mp3" target="app/src/main/res/raw/bratan.mp3" />
+		
+		<resource-file src="/res/raw/smeshno.mp3" target="app/src/main/res/raw/smeshno.mp3" />
+		
+		<resource-file src="/res/raw/sova.mp3" target="app/src/main/res/raw/sova.mp3" />
 		
 		<resource-file src="/res/drawable-mdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-mdpi/ic_stat_onesignal_default.png" />
 		<resource-file src="/res/drawable-hdpi/ic_stat_onesignal_default.png" target="app/src/main/res/drawable-hdpi/ic_stat_onesignal_default.png" />
