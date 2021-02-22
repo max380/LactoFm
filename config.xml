@@ -264,7 +264,7 @@
 
   <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
       <application android:usesCleartextTraffic="true" />
-	  <meta-data android:name="com.onesignal.NotificationAccentColor.DEFAULT" android:value="FF00FF00" />
+	  <application android:name="com.onesignal.NotificationAccentColor.DEFAULT" android:value="FF00FF00" />
   </edit-config>
 
 		<resource-file src="/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="app/src/main/res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" />
