@@ -79,7 +79,7 @@
         <div class="ChatTop">
           <button class="button_top a0" style="border-left: 1px solid #2b1414;">
             <div class="rtop">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg> МЕНЮ</div>
+            <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg> МЕНЮ</div>
          </button>
          <div class="mobile">
           <button class="button_top a1" style="border-left: 1px solid #2b1414;">
@@ -203,7 +203,7 @@
     <button class="CloseModalOrder"><i class="bi bi-x"></i></button>
     <div class="scroll HeightModalOrder" style="height: 497px;width: 99%;">
       <div class="sc-track-request-widget" style="padding: 0;">
-        <div is="track-request-widget" lang="ru" api-base="http://80.249.151.197:8080/api/v2" server-id="1" ip-timeout="600000" track-timeout="3600000" bgcolor="#171717" bgopacity="1" tracks_num="20" track_width="180" track_image_default="img/radio.png" meta_font_size="14" meta_font_style="normal" meta_font_color="#dedede" meta_opacity="1" button_color="#0c4613" button_color_active="#09531c" button_font_color="#00ff2a" button_font_size="14" ordering="3" allow_person_and_message="true" modal_background_color="#171717" modal_font_color="#cccccc" modal_background_opacity="1">
+        <div is="track-request-widget" lang="ru" api-base="https://radio.vtcpanel.com:8080/api/v2" server-id="1" ip-timeout="600000" track-timeout="3600000" bgcolor="#171717" bgopacity="1" tracks_num="20" track_width="180" track_image_default="img/radio.png" meta_font_size="14" meta_font_style="normal" meta_font_color="#dedede" meta_opacity="1" button_color="#0c4613" button_color_active="#09531c" button_font_color="#00ff2a" button_font_size="14" ordering="3" allow_person_and_message="true" modal_background_color="#171717" modal_font_color="#cccccc" modal_background_opacity="1">
       </div>
     </div>
   </div>
@@ -231,7 +231,7 @@ var html5audio = {
   play: function()
   {
     isPlaying = true;
-    myaudioURL = 'http://80.249.151.197:8000/stream';
+    myaudioURL = 'https://radio.vtcpanel.com:8005/stream';
     myaudio = new Audio(myaudioURL);
     myaudio.play();
     myaudio.volume = 0.6;
@@ -287,7 +287,7 @@ var html5audio = {
 $( document ).ready(function() {
  function updateTrack(){
    $.ajax({
- url: "http://80.249.151.197:8080/api/v2/history/?server=1&limit=1&callback=callback&format=jsonp",
+ url: "https://radio.vtcpanel.com:8080/api/v2/history/?server=1&limit=1&callback=callback&format=jsonp",
  jsonp: "callback",
  dataType: "jsonp",
  method: "GET",
@@ -302,7 +302,7 @@ $( document ).ready(function() {
  setInterval(updateTrack, 5000);
  function updateHistory(){
    $.ajax({
-     url: "http://80.249.151.197:8080/api/v2/history/?server=1&limit=15&callback=callback&format=jsonp",
+     url: "https://radio.vtcpanel.com:8080/api/v2/history/?server=1&limit=15&callback=callback&format=jsonp",
      jsonp: "callback",
      dataType: "jsonp",
      method: "GET",
@@ -316,7 +316,7 @@ $( document ).ready(function() {
   updateHistory();
   setInterval(updateHistory, 15000);
 });
-function CouOnline(){$.ajax({url:"http://80.249.151.197:8080/api/channels/?server=1&callback=callback&format=jsonp",jsonp:"callback",dataType:"jsonp",method:"GET",success:function(a){$(".CouOnline").text(a.objects[0].listeners_air)}})}
+function CouOnline(){$.ajax({url:"https://radio.vtcpanel.com:8080/api/channels/?server=1&callback=callback&format=jsonp",jsonp:"callback",dataType:"jsonp",method:"GET",success:function(a){$(".CouOnline").text(a.objects[0].listeners_air)}})}
  CouOnline();
  setInterval(CouOnline, 30000);
 });
